@@ -6,46 +6,53 @@
   <title>Descargas - Archivos</title>
   <style>
     body {
-      background-color: #ffffff;
-      color: #000000;
+      background-color: #000000;
+      color: #ffffff;
+      /* Fuente clásica de los 90: monoespaciada, como en terminales y BBS */
       font-family: "Courier New", Courier, monospace;
-      margin: 5vw;
-      line-height: 1.6;
-      max-width: 100%;
+      margin: 20px;
+      line-height: 1.4;
     }
 
     h1 {
-      font-size: 6vw; /* Más grande que el texto normal */
+      font-size: 28px; /* Tamaño fijo típico de los 90 */
       font-weight: bold;
-      margin: 0 0 1.2em 0; /* Espacio inferior para separar */
-      color: #000000;
+      margin: 0 0 15px 0;
+      color: #ff0000; /* Rojo puro, como en los CRT */
     }
 
     .archivo {
-      font-size: 4.5vw; /* Tamaño legible en móviles */
-      margin: 0.3em 0;
+      font-size: 16px;
+      margin: 8px 0;
     }
 
     a {
-      color: #0000ff;
-      text-decoration: underline;
+      font-family: "Courier New", Courier, monospace;
+      font-weight: bold;
+      color: #ff0000;
+      text-decoration: none; /* Sin subrayado, como pediste */
+      display: inline-block;
     }
 
     a:visited {
-      color: #800080;
+      color: #ff0000;
+    }
+
+    a:hover {
+      text-decoration: underline; /* Solo al pasar: comportamiento clásico */
     }
   </style>
 </head>
 <body>
   <h1>Investigo en Bluesky</h1>
   <div class="archivo">
-    <a href="https://drive.google.com/uc?export=download&id=TU_ID_ARCHIVO_1" target="_blank">archivo1</a>
+    <a href="https://drive.google.com/uc?export=download&id=TU_ID_ARCHIVO_1" target="_blank">PATRIARCHY</a>
   </div>
   <div class="archivo">
-    <a href="https://drive.google.com/uc?export=download&id=TU_ID_ARCHIVO_2" target="_blank">archivo2</a>
+    <a href="https://drive.google.com/uc?export=download&id=TU_ID_ARCHIVO_2" target="_blank">MISOGYNY</a>
   </div>
   <div class="archivo">
-    <a href="https://drive.google.com/uc?export=download&id=TU_ID_ARCHIVO_3" target="_blank">archivo3</a>
+    <a href="https://drive.google.com/uc?export=download&id=TU_ID_ARCHIVO_3" target="_blank">HOMOPHOBIA</a>
   </div>
 </body>
 </html>
