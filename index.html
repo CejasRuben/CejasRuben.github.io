@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE be
 <html lang="es">
 <head>
   <meta charset="UTF-8">
@@ -24,9 +24,9 @@
 
     .header {
       text-align: center;
-      margin-bottom: 40px;
+      /* Margen reducido y borde eliminado */
+      margin-bottom: 10px; 
       padding-bottom: 20px;
-      border-bottom: 1px solid #333;
     }
 
     h1 {
@@ -59,9 +59,16 @@
     }
 
     .metadatos {
+      /* Estilos para el contenedor de metadatos */
       font-size: 14px;
       color: #cccccc;
       margin-bottom: 15px;
+      line-height: 1.6;
+      
+      /* Borde eliminado */
+    }
+
+    .metadatos br {
       line-height: 1.4;
     }
 
@@ -115,9 +122,9 @@
     }
 
     .footer {
-      margin-top: 40px;
+      /* Margen reducido y borde eliminado */
+      margin-top: 20px;
       padding-top: 20px;
-      border-top: 1px solid #333;
       font-size: 12px;
       color: #666666;
       text-align: center;
@@ -150,13 +157,12 @@
     <h2>FICTION</h2>
     <div class="metadatos">
       <strong>Publicaciones analizadas:</strong> 127,027<br>
-      <strong>Período del estudio:</strong> 10 mayo 2025 - 21 septiembre 2025<br>
-      <strong>Núcleos temáticos identificados:</strong> 48<br>
-      <strong>Idioma de las publicaciones:</strong> Inglés
+      <strong>Período:</strong> 10-05-2025 - 21-09-2025<br>
+      <strong>Núcleos temáticos hallados:</strong> 48<br>
+      <strong>Idioma de los posteos:</strong> Inglés
     </div>
     <div class="botones">
       <a href="categorias-fiction.html" class="boton" target="_blank">Categorías</a>
-      <a href="1.fiction_2025-05-10_to_2025-09-21_en_cluster_45_12025posteos.txt" class="boton" target="_blank">Resúmenes</a>
     </div>
   </div>
 
@@ -164,13 +170,12 @@
     <h2>MISOGYNY</h2>
     <div class="metadatos">
       <strong>Publicaciones analizadas:</strong> 133,668<br>
-      <strong>Período del estudio:</strong> 1 enero 2025 - 12 septiembre 2025<br>
-      <strong>Núcleos temáticos identificados:</strong> 25<br>
-      <strong>Idioma de las publicaciones:</strong> Inglés
+      <strong>Período:</strong> 01-01-2025 - 12-09-2025<br>
+      <strong>Núcleos temáticos hallados:</strong> 25<br>
+      <strong>Idioma de los posteos:</strong> Inglés
     </div>
     <div class="botones">
       <a href="https://drive.google.com/uc?export=download&id=TU_ID_ARCHIVO_2" class="boton" target="_blank">Categorías</a>
-      <a href="/analisis/misogyny" class="boton">Resúmenes</a>
     </div>
   </div>
 
@@ -178,13 +183,12 @@
     <h2>HOMOPHOBIA</h2>
     <div class="metadatos">
       <strong>Publicaciones analizadas:</strong> 53,264<br>
-      <strong>Período del estudio:</strong> 21 septiembre 2024 - 21 septiembre 2025<br>
-      <strong>Núcleos temáticos identificados:</strong> 46<br>
-      <strong>Idioma de las publicaciones:</strong> Inglés
+      <strong>Período:</strong> 21-09-2024 - 21-09-2025<br>
+      <strong>Núcleos temáticos hallados:</strong> 46<br>
+      <strong>Idioma de los posteos:</strong> Inglés
     </div>
     <div class="botones">
       <a href="https://drive.google.com/uc?export=download&id=TU_ID_ARCHIVO_3" class="boton" target="_blank">Categorías</a>
-      <a href="/analisis/homophobia" class="boton">Resúmenes</a>
     </div>
   </div>
 
@@ -198,6 +202,15 @@
       botones.forEach(boton => boton.classList.remove('activo'));
 
       window.addEventListener("pageshow", () => {
+        if (document.activeElement && document.activeElement.classList.contains("boton")) {
+          document.activeElement.blur();
+        }
+      });
+    });
+  </script>
+</body>
+</html>
+eshow", () => {
         if (document.activeElement && document.activeElement.classList.contains("boton")) {
           document.activeElement.blur();
         }
