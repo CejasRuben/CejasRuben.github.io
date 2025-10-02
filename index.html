@@ -94,12 +94,18 @@
       color: #ffffff;
     }
 
-    /* Evitar que queden pintados al volver atrás */
+    /* 👇 Correcciones para evitar que queden blancos al volver atrás */
     .boton:focus,
-    .boton:active {
-      outline: none;
-      background-color: transparent;
-      color: #cccccc;
+    .boton:active,
+    .boton:focus-visible,
+    .boton:visited:focus {
+      outline: none !important;
+      background-color: transparent !important;
+      color: #cccccc !important;
+    }
+
+    .boton:visited {
+      color: #cccccc !important;
     }
 
     .footer {
@@ -194,25 +200,20 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      // Limpiar clases activas
+      // Quitar clases activas al cargar
       const botones = document.querySelectorAll('.boton');
       botones.forEach(boton => boton.classList.remove('activo'));
 
       // Limpiar foco al volver atrás
-      window.addEventListener('pageshow', function() {
-        if (document.activeElement) {
+      window.addEventListener("pageshow", () => {
+        if (document.activeElement && document.activeElement.classList.contains("boton")) {
           document.activeElement.blur();
         }
       });
     });
   </script>
 </body>
-</html>e === 2)) {
-          // Limpiar estado activo de todos los botones
-          const botones = document.querySelectorAll('.boton');
-          botones.forEach(boton => {
-            boton.classList.remove('activo');
-          });
+</html>;
         }
       });
     });
