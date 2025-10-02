@@ -8,12 +8,18 @@
     body {
       background-color: #000000;
       color: #ffffff;
-      font-family: "Courier New", Courier, monospace;
+      font-family: "Courier New", "IBM Plex Mono", "Fira Code", "Menlo", Courier, monospace;
       margin: 0;
       padding: 20px;
       line-height: 1.6;
       max-width: 800px;
       margin: 0 auto;
+
+      /* Mejoras tipográficas */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+      font-variant-numeric: tabular-nums;
     }
 
     .header {
@@ -24,17 +30,18 @@
     }
 
     h1 {
-      font-size: 28px;
+      font-size: 30px;
       font-weight: bold;
       margin: 0 0 10px 0;
       color: #ff0000;
+      letter-spacing: 0.5px;
     }
 
     .descripcion {
-      font-size: 14px;
+      font-size: 15px;
       color: #cccccc;
       margin: 0;
-      line-height: 1.4;
+      line-height: 1.5;
     }
 
     .investigacion {
@@ -45,13 +52,14 @@
 
     .investigacion h2 {
       margin: 0 0 15px 0;
-      font-size: 18px;
+      font-size: 20px;
       font-weight: bold;
       color: #ff0000;
+      letter-spacing: 0.5px;
     }
 
     .metadatos {
-      font-size: 13px;
+      font-size: 14px;
       color: #cccccc;
       margin-bottom: 15px;
       line-height: 1.4;
@@ -68,8 +76,8 @@
     }
 
     .boton {
-      font-family: "Courier New", Courier, monospace;
-      font-size: 13px;
+      font-family: inherit;
+      font-size: 14px;
       font-weight: bold;
       color: #cccccc;
       text-decoration: none;
@@ -88,13 +96,11 @@
       border-color: #555;
     }
 
-    /* Estado activo que se puede aplicar temporalmente */
     .boton.activo {
       background-color: #333;
       color: #ffffff;
     }
 
-    /* 👇 Correcciones para evitar que queden blancos al volver atrás */
     .boton:focus,
     .boton:active,
     .boton:focus-visible,
@@ -149,12 +155,8 @@
       <strong>Idioma de las publicaciones:</strong> Inglés
     </div>
     <div class="botones">
-      <a href="categorias-fiction.html" class="boton" target="_blank">
-        Categorías
-      </a>
-      <a href="1.fiction_2025-05-10_to_2025-09-21_en_cluster_45_12025posteos.txt" class="boton" target="_blank">
-        Resúmenes
-      </a>
+      <a href="categorias-fiction.html" class="boton" target="_blank">Categorías</a>
+      <a href="1.fiction_2025-05-10_to_2025-09-21_en_cluster_45_12025posteos.txt" class="boton" target="_blank">Resúmenes</a>
     </div>
   </div>
 
@@ -167,12 +169,8 @@
       <strong>Idioma de las publicaciones:</strong> Inglés
     </div>
     <div class="botones">
-      <a href="https://drive.google.com/uc?export=download&id=TU_ID_ARCHIVO_2" class="boton" target="_blank">
-        Categorías
-      </a>
-      <a href="/analisis/misogyny" class="boton">
-        Resúmenes
-      </a>
+      <a href="https://drive.google.com/uc?export=download&id=TU_ID_ARCHIVO_2" class="boton" target="_blank">Categorías</a>
+      <a href="/analisis/misogyny" class="boton">Resúmenes</a>
     </div>
   </div>
 
@@ -185,12 +183,8 @@
       <strong>Idioma de las publicaciones:</strong> Inglés
     </div>
     <div class="botones">
-      <a href="https://drive.google.com/uc?export=download&id=TU_ID_ARCHIVO_3" class="boton" target="_blank">
-        Categorías
-      </a>
-      <a href="/analisis/homophobia" class="boton">
-        Resúmenes
-      </a>
+      <a href="https://drive.google.com/uc?export=download&id=TU_ID_ARCHIVO_3" class="boton" target="_blank">Categorías</a>
+      <a href="/analisis/homophobia" class="boton">Resúmenes</a>
     </div>
   </div>
 
@@ -200,16 +194,18 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      // Quitar clases activas al cargar
       const botones = document.querySelectorAll('.boton');
       botones.forEach(boton => boton.classList.remove('activo'));
 
-      // Limpiar foco al volver atrás
       window.addEventListener("pageshow", () => {
         if (document.activeElement && document.activeElement.classList.contains("boton")) {
           document.activeElement.blur();
         }
       });
+    });
+  </script>
+</body>
+</html>
     });
   </script>
 </body>
