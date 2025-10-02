@@ -8,12 +8,18 @@
     body {
       background-color: #000000;
       color: #ffffff;
-      font-family: "Courier New", Courier, monospace;
+      font-family: "Courier New", "IBM Plex Mono", "Fira Code", "Menlo", Courier, monospace;
       margin: 0;
       padding: 20px;
       line-height: 1.6;
       max-width: 900px;
       margin: 0 auto;
+
+      /* Mejoras tipográficas */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+      font-variant-numeric: tabular-nums;
     }
 
     .header {
@@ -27,10 +33,11 @@
     }
 
     h1 {
-      font-size: 28px;
+      font-size: 30px;
       font-weight: bold;
       margin: 0;
       color: #ff0000;
+      letter-spacing: 0.5px;
     }
 
     .categorias-container {
@@ -56,7 +63,6 @@
       background-color: #1a1a1a;
     }
 
-    /* Evitar que quede pintada por focus */
     .categoria:focus {
       outline: none;
     }
@@ -72,10 +78,11 @@
     .titulo {
       font-weight: bold;
       margin-bottom: 5px;
+      font-size: 15px;
     }
 
     .conteo {
-      font-size: 13px;
+      font-size: 14px;
       color: #cccccc;
       margin-top: 5px;
     }
@@ -367,7 +374,6 @@
         });
       });
 
-      // Limpiar foco al volver atrás
       window.addEventListener('pageshow', function() {
         if (document.activeElement) {
           document.activeElement.blur();
