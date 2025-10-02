@@ -94,6 +94,14 @@
       color: #ffffff;
     }
 
+    /* Evitar que queden pintados al volver atrás */
+    .boton:focus,
+    .boton:active {
+      outline: none;
+      background-color: transparent;
+      color: #cccccc;
+    }
+
     .footer {
       margin-top: 40px;
       padding-top: 20px;
@@ -185,18 +193,21 @@
   </div>
 
   <script>
-    // Solución para el problema del botón rojo
     document.addEventListener('DOMContentLoaded', function() {
-      // Limpiar cualquier estado activo de botones al cargar la página
+      // Limpiar clases activas
       const botones = document.querySelectorAll('.boton');
-      botones.forEach(boton => {
-        boton.classList.remove('activo');
+      botones.forEach(boton => boton.classList.remove('activo'));
+
+      // Limpiar foco al volver atrás
+      window.addEventListener('pageshow', function() {
+        if (document.activeElement) {
+          document.activeElement.blur();
+        }
       });
-      
-      // Detectar cuando se vuelve a la página (navegación hacia atrás)
-      window.addEventListener('pageshow', function(event) {
-        // Si la página se carga desde la caché (al volver atrás)
-        if (event.persisted || (window.performance && window.performance.navigation.type === 2)) {
+    });
+  </script>
+</body>
+</html>e === 2)) {
           // Limpiar estado activo de todos los botones
           const botones = document.querySelectorAll('.boton');
           botones.forEach(boton => {
