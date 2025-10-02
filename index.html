@@ -71,18 +71,27 @@
       font-family: "Courier New", Courier, monospace;
       font-size: 13px;
       font-weight: bold;
-      color: #ff0000;
+      color: #cccccc;
       text-decoration: none;
       padding: 8px 15px;
-      border: 1px solid #ff0000;
+      border: 1px solid #333;
       background-color: transparent;
       transition: all 0.3s ease;
+      cursor: pointer;
+      display: inline-block;
     }
 
     .boton:hover {
-      background-color: #ff0000;
-      color: #000000;
+      background-color: #333;
+      color: #ffffff;
       text-decoration: none;
+      border-color: #555;
+    }
+
+    /* Estado activo que se puede aplicar temporalmente */
+    .boton.activo {
+      background-color: #333;
+      color: #ffffff;
     }
 
     .footer {
@@ -126,7 +135,7 @@
       <strong>Idioma de las publicaciones:</strong> Inglés
     </div>
     <div class="botones">
-      <a href="Núcleos_temáticos_en_fiction_2025-05-10_to_2025-09-21_inglés_127027posteos.txt" class="boton" target="_blank">
+      <a href="categorias-fiction.html" class="boton" target="_blank">
         Categorías
       </a>
       <a href="1.fiction_2025-05-10_to_2025-09-21_en_cluster_45_12025posteos.txt" class="boton" target="_blank">
@@ -174,5 +183,28 @@
   <div class="footer">
     <p>Total de publicaciones analizadas: 313,959 | Metodología: Análisis temático automatizado</p>
   </div>
+
+  <script>
+    // Solución para el problema del botón rojo
+    document.addEventListener('DOMContentLoaded', function() {
+      // Limpiar cualquier estado activo de botones al cargar la página
+      const botones = document.querySelectorAll('.boton');
+      botones.forEach(boton => {
+        boton.classList.remove('activo');
+      });
+      
+      // Detectar cuando se vuelve a la página (navegación hacia atrás)
+      window.addEventListener('pageshow', function(event) {
+        // Si la página se carga desde la caché (al volver atrás)
+        if (event.persisted || (window.performance && window.performance.navigation.type === 2)) {
+          // Limpiar estado activo de todos los botones
+          const botones = document.querySelectorAll('.boton');
+          botones.forEach(boton => {
+            boton.classList.remove('activo');
+          });
+        }
+      });
+    });
+  </script>
 </body>
 </html>
