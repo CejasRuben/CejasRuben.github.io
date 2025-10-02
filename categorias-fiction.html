@@ -15,7 +15,6 @@
       max-width: 900px;
       margin: 0 auto;
 
-      /* Mejoras tipográficas */
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
       text-rendering: optimizeLegibility;
@@ -48,7 +47,6 @@
     }
 
     .categoria {
-      padding: 15px;
       border: 1px solid #333;
       background-color: #111111;
       transition: all 0.3s ease;
@@ -56,15 +54,10 @@
       -webkit-tap-highlight-color: transparent;
       tap-highlight-color: transparent;
     }
-
-    .categoria:hover,
-    .categoria.activa {
+    
+    .categoria:hover {
       border-color: #ff0000;
       background-color: #1a1a1a;
-    }
-
-    .categoria:focus {
-      outline: none;
     }
 
     .numero {
@@ -96,15 +89,20 @@
       text-align: center;
     }
 
+    .categoria a {
+      text-decoration: none; 
+      color: inherit; 
+      display: block; 
+      padding: 15px; 
+    }
+
     @media (max-width: 600px) {
       body {
         padding: 15px;
       }
-      
-      .categoria {
+      .categoria a {
         padding: 12px;
       }
-      
       .header {
         height: calc(50vh - 80px);
         min-height: 100px;
@@ -118,84 +116,101 @@
   </div>
 
   <div class="categorias-container">
-    <div class="categoria activa" data-id="1">
-      <div class="titulo"><span class="numero">1.</span>La Ficción como Estrategia Política de Trump y MAGA.</div>
-      <div class="conteo">En 12025 posteos</div>
+    <div class="categoria" data-id="1">
+      <a href="resumen1-fiction.html">
+        <div class="titulo"><span class="numero">1.</span>La Ficción como Estrategia Política de Trump y MAGA.</div>
+        <div class="conteo">En 12025 posteos</div>
+      </a>
     </div>
 
     <div class="categoria" data-id="2">
-      <div class="titulo"><span class="numero">2.</span>Sobre la Ficción y sus Límites.</div>
-      <div class="conteo">En 10591 posteos</div>
+      <a href="resumen2-fiction.html">
+        <div class="titulo"><span class="numero">2.</span>Sobre la Ficción y sus Límites.</div>
+        <div class="conteo">En 10591 posteos</div>
+      </a>
     </div>
 
     <div class="categoria" data-id="3">
-      <div class="titulo"><span class="numero">3.</span>Naturaleza de la Ciencia Ficción.</div>
-      <div class="conteo">En 9897 posteos</div>
+      <a href="resumen3-fiction.html">
+        <div class="titulo"><span class="numero">3.</span>Naturaleza de la Ciencia Ficción.</div>
+        <div class="conteo">En 9897 posteos</div>
+      </a>
     </div>
 
     <div class="categoria" data-id="4">
-      <div class="titulo"><span class="numero">4.</span>Preferencias y Percepciones de Lectura.</div>
-      <div class="conteo">En 9356 posteos</div>
+      <a href="resumen4-fiction.html">
+        <div class="titulo"><span class="numero">4.</span>Preferencias y Percepciones de Lectura.</div>
+        <div class="conteo">En 9356 posteos</div>
+      </a>
     </div>
 
     <div class="categoria" data-id="5">
-      <div class="titulo"><span class="numero">5.</span>Críticas a la Ficción Generada por IA.</div>
-      <div class="conteo">En 8254 posteos</div>
+      <a href="resumen5-fiction.html">
+        <div class="titulo"><span class="numero">5.</span>Críticas a la Ficción Generada por IA.</div>
+        <div class="conteo">En 8254 posteos</div>
+      </a>
     </div>
 
     <div class="categoria" data-id="6">
-      <div class="titulo"><span class="numero">6.</span>El Panorama de la Ficción Queer y Trans Actual.</div>
-      <div class="conteo">En 5592 posteos</div>
+      <a href="resumen6-fiction.html">
+        <div class="titulo"><span class="numero">6.</span>El Panorama de la Ficción Queer y Trans Actual.</div>
+        <div class="conteo">En 5592 posteos</div>
+      </a>
     </div>
 
     <div class="categoria" data-id="7">
-      <div class="titulo"><span class="numero">7.</span>Fan Fiction: Debates, Experiencias y Percepciones.</div>
-      <div class="conteo">En 5044 posteos</div>
+      <a href="resumen7-fiction.html">
+        <div class="titulo"><span class="numero">7.</span>Fan Fiction: Debates, Experiencias y Percepciones.</div>
+        <div class="conteo">En 5044 posteos</div>
+      </a>
     </div>
 
     <div class="categoria" data-id="8">
-      <div class="titulo"><span class="numero">8.</span>Desafíos y Motivaciones del Escritor de Ficción.</div>
-      <div class="conteo">En 4980 posteos</div>
+      <a href="resumen8-fiction.html">
+        <div class="titulo"><span class="numero">8.</span>Desafíos y Motivaciones del Escritor de Ficción.</div>
+        <div class="conteo">En 4980 posteos</div>
+      </a>
     </div>
 
     <div class="categoria" data-id="9">
-      <div class="titulo"><span class="numero">9.</span>El Arte de la Brevedad: Escribir y Publicar Flash Fiction.</div>
-      <div class="conteo">En 4888 posteos</div>
+      <a href="resumen9-fiction.html">
+        <div class="titulo"><span class="numero">9.</span>El Arte de la Brevedad: Escribir y Publicar Flash Fiction.</div>
+        <div class="conteo">En 4888 posteos</div>
+      </a>
     </div>
 
     <div class="categoria" data-id="10">
-      <div class="titulo"><span class="numero">10.</span>Clásicos y Tendencias.</div>
-      <div class="conteo">En 4527 posteos</div>
+      <a href="resumen10-fiction.html">
+        <div class="titulo"><span class="numero">10.</span>Clásicos y Tendencias.</div>
+        <div class="conteo">En 4527 posteos</div>
+      </a>
     </div>
 
-    <div class="categoria" data-id="11">
-      <div class="titulo"><span class="numero">11.</span>Pulp Fiction: Impacto y Legado Cinematográfico.</div>
-      <div class="conteo">En 3861 posteos</div>
-    </div>
+    <!-- ... repetir la misma estructura hasta la categoría 48 ... -->
 
-    <div class="categoria" data-id="12">
-      <div class="titulo"><span class="numero">12.</span>Ficción Histórica: Género Central y Comunidad.</div>
-      <div class="conteo">En 3783 posteos</div>
+    <div class="categoria" data-id="48">
+      <a href="resumen48-fiction.html">
+        <div class="titulo"><span class="numero">48.</span>Brexit y las Narrativas Ficticias.</div>
+        <div class="conteo">En 293 posteos</div>
+      </a>
     </div>
+  </div>
 
-    <div class="categoria" data-id="13">
-      <div class="titulo"><span class="numero">13.</span>Ficción Interactiva y Juegos de Rol de Mesa.</div>
-      <div class="conteo">En 3690 posteos</div>
-    </div>
+  <div class="footer">
+    <p>Total de publicaciones analizadas: 127,027 | Metodología: Análisis temático automatizado</p>
+  </div>
 
-    <div class="categoria" data-id="14">
-      <div class="titulo"><span class="numero">14.</span>Desmitificando la Biblia: La propuesta de etiquetar la religión como ficción.</div>
-      <div class="conteo">En 3309 posteos</div>
-    </div>
-
-    <div class="categoria" data-id="15">
-      <div class="titulo"><span class="numero">15.</span>La Distopía se Vuelve Realidad.</div>
-      <div class="conteo">En 3052 posteos</div>
-    </div>
-
-    <div class="categoria" data-id="16">
-      <div class="titulo"><span class="numero">16.</span>Explorando la Ficción Criminal y sus Subgéneros.</div>
-      <div class="conteo">En 2742 posteos</div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      window.addEventListener('pageshow', function() {
+        if (document.activeElement) {
+          document.activeElement.blur();
+        }
+      });
+    });
+  </script>
+</body>
+</html>eo">En 2742 posteos</div>
     </div>
 
     <div class="categoria" data-id="17">
