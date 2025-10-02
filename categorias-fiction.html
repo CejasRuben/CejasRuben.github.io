@@ -21,7 +21,6 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      /* Altura calculada para centrar entre borde superior y primer recuadro */
       height: calc(50vh - 100px);
       min-height: 60px;
       max-height: 120px;
@@ -41,19 +40,25 @@
       margin-bottom: 40px;
     }
 
-.categoria {
-    padding: 15px;
-    border: 1px solid #333;
-    background-color: #111111;
-    transition: all 0.3s ease;
-    cursor: pointer;
-    -webkit-tap-highlight-color: transparent;
-    tap-highlight-color: transparent;
-}
+    .categoria {
+      padding: 15px;
+      border: 1px solid #333;
+      background-color: #111111;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+      tap-highlight-color: transparent;
+    }
 
-    .categoria:hover, .categoria.activa {
+    .categoria:hover,
+    .categoria.activa {
       border-color: #ff0000;
       background-color: #1a1a1a;
+    }
+
+    /* Evitar que quede pintada por focus */
+    .categoria:focus {
+      outline: none;
     }
 
     .numero {
@@ -357,12 +362,16 @@
       
       categorias.forEach(categoria => {
         categoria.addEventListener('click', function() {
-          // Remover la clase 'activa' de todas las categorías
           categorias.forEach(cat => cat.classList.remove('activa'));
-          
-          // Agregar la clase 'activa' a la categoría clickeada
           this.classList.add('activa');
         });
+      });
+
+      // Limpiar foco al volver atrás
+      window.addEventListener('pageshow', function() {
+        if (document.activeElement) {
+          document.activeElement.blur();
+        }
       });
     });
   </script>
