@@ -132,64 +132,9 @@ p, li {
 }
 
 /* ------------------------------------------------------------
-   LÍNEA SEPARADORA PARA CATEGORÍA - NUEVO ESTILO AÑADIDO
+   CATEGORÍAS - SIN LÍNEA SEPARADORA INDIVIDUAL
    ------------------------------------------------------------ */
 .categoria {
-  position: relative;
-  padding-bottom: 25px; /* Mismo padding que descripcion-index */
-  margin-bottom: 30px; /* Mismo margin que descripcion-index */
-}
-
-.categoria::after {
-  content: "";
-  position: absolute;
-  bottom: 0; /* Posicionada al final del padding-bottom */
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, var(--color-accent), transparent);
-}
-
-/* ------------------------------------------------------------
-   BOTÓN DE CONSULTA - LÍNEA CONTINUA COMO HEADER
-   ------------------------------------------------------------ */
-.boton-consulta {
-  position: relative;
-  text-align: center;
-  padding: 25px 0;
-  margin-bottom: 30px;
-  border-top: 1px solid var(--color-accent);
-  border-bottom: 1px solid var(--color-accent);
-}
-
-.boton-consulta::before {
-  content: "";
-  position: absolute;
-  top: -2px;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, var(--color-accent), transparent);
-}
-
-/* ------------------------------------------------------------
-   DESCRIPCIONES DE SECCIONES EN RESUMENES - ALINEACIÓN IZQUIERDA
-   ------------------------------------------------------------ */
-.seccion .descripcion {
-  text-align: left;
-  padding-bottom: 0;
-  margin-bottom: 15px;
-}
-
-.seccion .descripcion::after {
-  content: none; /* Elimina los tres puntos en resúmenes */
-}
-
-/* ------------------------------------------------------------
-   CATEGORÍAS - MARCO ÚNICO
-   ------------------------------------------------------------ */
-.categoria {
-  /* MODIFICACIÓN CLAVE: Fondo negro */
   background-color: #000000; 
   border: 1px solid var(--color-border);
   padding: 20px;
@@ -227,25 +172,45 @@ p, li {
 }
 
 /* ------------------------------------------------------------
+   BOTÓN DE CONSULTA - ÚNICA LÍNEA SEPARADORA ANTES DEL FOOTER
+   ------------------------------------------------------------ */
+.boton-consulta {
+  position: relative;
+  text-align: center;
+  padding: 25px 0;
+  margin-bottom: 30px;
+  border-top: 1px solid var(--color-accent);
+  border-bottom: 1px solid var(--color-accent);
+}
+
+.boton-consulta::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-accent), transparent);
+}
+
+/* ------------------------------------------------------------
    SOLUCIÓN FINAL: Estados de Categoría (Hover, Active, Visited, Focus)
    ------------------------------------------------------------ */
 
 /* Efecto hover y focus */
 .categoria:hover,
 .categoria:focus-within {
-  /* MODIFICACIÓN: Fondo negro en hover/focus */
   background-color: #000000;
-  border-color: var(--color-border); /* MANTIENE BORDE GRIS */
+  border-color: var(--color-border);
   box-shadow: 0 0 10px rgba(17, 17, 17, 0.8);
   outline: none; 
 }
 
 /* ESTADO ACTIVO (Al pulsar/tocar) */
 .categoria:active {
-  /* MODIFICACIÓN: Fondo negro en active */
   background-color: #000000 !important; 
-  border-color: var(--color-border); /* MANTIENE BORDE GRIS - NO CAMBIA A ROJO */
-  box-shadow: 0 0 10px rgba(17, 17, 17, 0.8); /* MANTIENE SOMBRA GRIS */
+  border-color: var(--color-border);
+  box-shadow: 0 0 10px rgba(17, 17, 17, 0.8);
   transition-duration: 0.05s;
 }
 
@@ -271,7 +236,6 @@ p, li {
    SECCIONES
    ------------------------------------------------------------ */
 .seccion {
-  /* MODIFICACIÓN: Fondo negro */
   background-color: #000000;
   border: 1px solid var(--color-border);
   padding: 20px;
@@ -312,7 +276,6 @@ a:not(.categoria a) {
   border: 1px solid var(--color-border);
   padding: 6px 12px;
   display: inline-block;
-  /* MODIFICACIÓN: Fondo negro */
   background-color: #000000;
   transition: all 0.2s ease;
   -webkit-tap-highlight-color: transparent;
@@ -322,26 +285,24 @@ a:not(.categoria a) {
 }
 
 a:not(.categoria a):visited {
-  color: var(--color-text); /* Mantiene el color original después de visitar */
-  border-color: var(--color-border); /* Mantiene el borde original */
+  color: var(--color-text);
+  border-color: var(--color-border);
 }
 
-/* Efecto hover para enlaces - MISMAS PROPIEDADES QUE CATEGORÍA */
+/* Efecto hover para enlaces */
 a:not(.categoria a):hover,
 a:not(.categoria a):focus {
-  /* MODIFICACIÓN: Fondo negro en hover/focus */
   background-color: #000000;
-  border-color: var(--color-border); /* MANTIENE BORDE GRIS */
+  border-color: var(--color-border);
   box-shadow: 0 0 10px rgba(17, 17, 17, 0.8);
   outline: none;
 }
 
-/* ESTADO ACTIVO (Al pulsar/tocar) - MISMAS PROPIEDADES QUE CATEGORÍA */
+/* ESTADO ACTIVO (Al pulsar/tocar) */
 a:not(.categoria a):active {
-  /* MODIFICACIÓN: Fondo negro en active */
   background-color: #000000 !important; 
-  border-color: var(--color-border); /* MANTIENE BORDE GRIS - NO CAMBIA A ROJO */
-  box-shadow: 0 0 10px rgba(17, 17, 17, 0.8); /* MANTIENE SOMBRA GRIS */
+  border-color: var(--color-border);
+  box-shadow: 0 0 10px rgba(17, 17, 17, 0.8);
   transition-duration: 0.05s;
 }
 
@@ -412,14 +373,8 @@ a:focus-visible {
   
   /* Línea roja responsive - SOLO INDEX */
   .descripcion-index {
-    padding-bottom: 15px; /* REDUCIDO para móviles */
-    margin-bottom: 20px; /* AJUSTADO para móviles */
-  }
-  
-  /* Línea roja para categoría en móviles */
-  .categoria {
-    padding-bottom: 15px; /* REDUCIDO para móviles */
-    margin-bottom: 20px; /* AJUSTADO para móviles */
+    padding-bottom: 15px;
+    margin-bottom: 20px;
   }
   
   /* Botón de consulta en móviles */
