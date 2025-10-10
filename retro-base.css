@@ -324,7 +324,20 @@ a:focus-visible {
   color: var(--color-muted);
   font-size: 13px;
   padding-top: 15px;
-  margin-top: 25px;
+  /* CAMBIO APLICADO AQUÍ */
+  margin-top: 22px;
+}
+
+/* ------------------------------------------------------------
+   AJUSTE DE ENLACE DEL PIE DE PÁGINA (Consultas)
+   Asegura que el borde NO cambie a rojo en hover/focus, manteniendo el gris.
+   ------------------------------------------------------------ */
+.footer a:hover,
+.footer a:focus {
+  /* Restablece el color del borde a gris (var(--color-border) es #333333) */
+  border-color: var(--color-border);
+  /* Mantiene la transición de fondo-color si se aplicara otra cosa, pero mantiene el fondo negro */
+  background-color: #000000;
 }
 
 /* ------------------------------------------------------------
