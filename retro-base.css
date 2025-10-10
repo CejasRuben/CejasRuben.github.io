@@ -97,7 +97,6 @@ p, li {
   font-size: 15px;
   color: var(--color-muted);
   margin-top: 5px;
-  font-family: inherit;
 }
 
 /* ------------------------------------------------------------
@@ -169,10 +168,9 @@ p, li {
 }
 
 .categoria small {
-  color: var(--color-text); /* CAMBIADO: de #888888 a #e5e5e5 */
+  color: var(--color-muted);
   font-size: 14px;
-  font-style: normal; /* CAMBIADO: quitamos la cursiva */
-  font-family: inherit;
+  font-style: italic;
 }
 
 /* ------------------------------------------------------------
@@ -213,7 +211,7 @@ p, li {
 }
 
 .categoria a:visited small {
-  color: var(--color-text); /* CAMBIADO: mantiene gris claro al visitar */
+  color: var(--color-muted);
 }
 
 /* ------------------------------------------------------------
@@ -248,7 +246,6 @@ p, li {
   display: block;
   margin-bottom: 5px;
   font-size: 15px;
-  font-family: inherit;
 }
 
 .cita-traduccion {
@@ -319,7 +316,6 @@ a:focus-visible, .boton:focus-visible {
   font-size: 13px;
   padding-top: 15px;
   margin-top: 25px;
-  font-family: inherit;
 }
 
 /* ------------------------------------------------------------
@@ -347,6 +343,16 @@ a:focus-visible, .boton:focus-visible {
   /* Línea roja responsive - SOLO INDEX */
   .descripcion-index {
     padding-bottom: 15px; /* REDUCIDO para móviles */
+    margin-bottom: 20px; /* AJUSTADO para móviles */
+  }
+  
+  /* Ajustes para botones en móviles */
+  a:not(.categoria a), .boton {
+    padding: 8px 14px;
+    font-size: 14px;
+  }
+}
+ /* REDUCIDO para móviles */
     margin-bottom: 20px; /* AJUSTADO para móviles */
   }
   
