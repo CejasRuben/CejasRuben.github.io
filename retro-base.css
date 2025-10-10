@@ -1,302 +1,369 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Núcleos temáticos</title>
-<link rel="stylesheet" href="retro-base.css">
-</head>
-<body>
-  <div class="header"><h1>Núcleos temáticos</h1></div>
-  <div class="categoria">
-    <a href="fiction-resumen1.html" target="_blank">
-      1. Trump, Maga y la Delgada Línea entre Realidad y Ficción.<br>
-      <small>En 12025 posteos</small>
-    </a>
-  </div>
-  <div class="categoria">
-    <a href="fiction-resumen2.html" target="_blank">
-      2. Ficción vs. Realidad: El Debate sobre Límites y Censura.<br>
-      <small>En 10591 posteos</small>
-    </a>
-  </div>
-  <div class="categoria">
-    <a href="fiction-resumen3.html" target="_blank">
-      3. El Universo de la Ciencia Ficción: Un Espejo del Presente.<br>
-      <small>En 9897 posteos</small>
-    </a>
-  </div>
-  <div class="categoria">
-    <a href="fiction-resumen4.html" target="_blank">
-      4. Lectores Divididos: El Equilibrio entre Ficción y No Ficción.<br>
-      <small>En 9356 posteos</small>
-    </a>
-  </div>
-  <div class="categoria">
-    <a href="fiction-resumen5.html" target="_blank">
-      5. IA en la Ficción: Advertencia, Herramienta o Amenaza.<br>
-      <small>En 8254 posteos</small>
-    </a>
-  </div>
-  <div class="categoria">
-    <a href="fiction-resumen6.html" target="_blank">
-      6. Voces Queer: Un Mosaico de Ficción y Realidad.<br>
-      <small>En 5592 posteos</small>
-    </a>
-  </div>
-  <div class="categoria">
-    <a href="fiction-resumen7.html" target="_blank">
-      7. Fan Fiction: Entre la Pasión Creativa y la Obra Original.<br>
-      <small>En 5044 posteos</small>
-    </a>
-  </div>
-  <div class="categoria">
-    <a href="fiction-resumen8.html" target="_blank">
-      8. El Viaje del Escritor: Pasión y Desafíos en la Ficción.<br>
-      <small>En 4980 posteos</small>
-    </a>
-  </div>
-  <div class="categoria">
-    <a href="fiction-resumen9.html" target="_blank">
-      9. El Arte de la Ficción Ultracorta: Una Comunidad Creativa.<br>
-      <small>En 4888 posteos</small>
-    </a>
-  </div>
-  <div class="categoria">
-    <a href="fiction-resumen10.html" target="_blank">
-      10. Un Viaje por el Universo del Cine de Ciencia Ficción.<br>
-      <small>En 4527 posteos</small>
-    </a>
-  </div>
-  <div class="categoria">
-    <a href="fiction-resumen11.html" target="_blank">
-      11. Pulp Fiction: Un Clásico de Culto que Redefinió el Cine.<br>
-      <small>En 3861 posteos</small>
-    </a>
-  </div>
-  <div class="categoria">
-    <a href="fiction-resumen12.html" target="_blank">
-      12. La Ficción Histórica: Un Género que Cautiva Lectores.<br>
-      <small>En 3783 posteos</small>
-    </a>
-  </div>
-  <div class="categoria">
-    <a href="fiction-resumen13.html" target="_blank">
-      13. La Ficción como Motor de Juegos y Narrativas.<br>
-      <small>En 3690 posteos</small>
-    </a>
-  </div>
-  <div class="categoria">
-    <a href="fiction-resumen14.html" target="_blank">
-      14. Textos Sagrados como Ficción: Crítica a la Religión.<br>
-      <small>En 3309 posteos</small>
-    </a>
-  </div>
-  <div class="categoria">
-    <a href="fiction-resumen15.html" target="_blank">
-      15. Ficción Distópica: Cuando la Realidad Supera la Advertencia.<br>
-      <small>En 3052 posteos</small>
-    </a>
-  </div>
-  <div class="categoria">
-    <a href="fiction-resumen16.html" target="_blank">
-      16. Un Vistazo Profundo al Género de Ficción Criminal.<br>
-      <small>En 2742 posteos</small>
-    </a>
-  </div>
-  <div class="categoria">
-    <a href="fiction-resumen17.html" target="_blank">
-      17. El Fenómeno 'Peak Fiction': Obras que Definen un Género.<br>
-      <small>En 2427 posteos</small>
-    </a>
-  </div>
-  <div class="categoria">
-    <a href="fiction-resumen18.html" target="_blank">
-      18. Ficción vs. Realidad: El Eterno Debate Digital.<br>
-      <small>En 2271 posteos</small>
-    </a>
-  </div>
-  <div class="categoria">
-    <a href="fiction-resumen19.html" target="_blank">
-      19. La Realidad Supera a la Ficción: La Verdad Increíble.<br>
-      <small>En 2269 posteos</small>
-    </a>
-  </div>
-  <div class="categoria">
-    <a href="fiction-resumen20.html" target="_blank">
-      20. La Falsa Guerra entre Ficción Literaria y de Género.<br>
-      <small>En 2123 posteos</small>
-    </a>
-  </div>
-  <div class="categoria">
-    <a href="fiction-resumen21.html" target="_blank">
-      21. El Universo de la Ficción Weird y el Horror.<br>
-      <small>En 1606 posteos</small>
-    </a>
-  </div>
-  <div class="categoria">
-    <a href="fiction-resumen22.html" target="_blank">
-      22. Ficción Histórica: El Desafío entre Investigación y Creatividad.<br>
-      <small>En 1441 posteos</small>
-    </a>
-  </div>
-  <div class="categoria">
-    <a href="fiction-resumen23.html" target="_blank">
-      23. La Crisis de la Ficción: El Debate Sobre los Hombres y la Lectura.<br>
-      <small>En 1414 posteos</small>
-    </a>
-  </div>
-  <div class="categoria">
-    <a href="fiction-resumen24.html" target="_blank">
-      24. The Villain Paradox: Fiction's Complexity vs. Real Evil.<br>
-      <small>En 1380 posteos</small>
-    </a>
-  </div>
-  <div class="categoria">
-    <a href="fiction-resumen25.html" target="_blank">
-      25. Star Wars: El Debate Entre Ciencia Ficción y Fantasía.<br>
-      <small>En 1350 posteos</small>
-    </a>
-  </div>
-  <div class="categoria">
-    <a href="fiction-resumen26.html" target="_blank">
-      26. Ficción Climática: Narrativas para un Planeta en Crisis.<br>
-      <small>En 1326 posteos</small>
-    </a>
-  </div>
-  <div class="categoria">
-    <a href="fiction-resumen27.html" target="_blank">
-      27. El Amor en la Ficción: Entre el Escapismo y la Realidad.<br>
-      <small>En 1146 posteos</small>
-    </a>
-  </div>
-  <div class="categoria">
-    <a href="fiction-resumen28.html" target="_blank">
-      28. Superhéroes: Debate entre Ficción, Realidad y Poder.<br>
-      <small>En 966 posteos</small>
-    </a>
-  </div>
-  <div class="categoria">
-    <a href="fiction-resumen29.html" target="_blank">
-      29. El Poder de la Ficción para Revelar la Verdad.<br>
-      <small>En 966 posteos</small>
-    </a>
-  </div>
-  <div class="categoria">
-    <a href="fiction-resumen30.html" target="_blank">
-      30. El Intenso Debate sobre la Ficción Juvenil (YA).<br>
-      <small>En 882 posteos</small>
-    </a>
-  </div>
-  <div class="categoria">
-    <a href="fiction-resumen31.html" target="_blank">
-      31. Autores Revelan su Vínculo con la Ficción Erótica.<br>
-      <small>En 739 posteos</small>
-    </a>
-  </div>
-  <div class="categoria">
-    <a href="fiction-resumen32.html" target="_blank">
-      32. Mechsploitation: Ficción Queer con Robots Gigantes.<br>
-      <small>En 704 posteos</small>
-    </a>
-  </div>
-  <div class="categoria">
-    <a href="fiction-resumen33.html" target="_blank">
-      33. La Guerra de Narrativas: Realidad vs. Ficción en Gaza.<br>
-      <small>En 685 posteos</small>
-    </a>
-  </div>
-  <div class="categoria">
-    <a href="fiction-resumen34.html" target="_blank">
-      34. Ficción y Neurodivergencia: Reflejos de una Realidad.<br>
-      <small>En 632 posteos</small>
-    </a>
-  </div>
-  <div class="categoria">
-    <a href="fiction-resumen35.html" target="_blank">
-      35. La Ficción como Reflejo y Arma del Racismo Real.<br>
-      <small>En 620 posteos</small>
-    </a>
-  </div>
-  <div class="categoria">
-    <a href="fiction-resumen36.html" target="_blank">
-      36. Explorando el Universo de la Ficción de Vampiros.<br>
-      <small>En 600 posteos</small>
-    </a>
-  </div>
-  <div class="categoria">
-    <a href="fiction-resumen37.html" target="_blank">
-      37. La Ficción como Interfaz: El Continuo Realidad-Ficción de Kuroda.<br>
-      <small>En 597 posteos</small>
-    </a>
-  </div>
-  <div class="categoria">
-    <a href="fiction-resumen38.html" target="_blank">
-      38. 1984: De la Ficción Distópica a la Realidad Actual.<br>
-      <small>En 582 posteos</small>
-    </a>
-  </div>
-  <div class="categoria">
-    <a href="fiction-resumen39.html" target="_blank">
-      39. Ficción por Suscripción: Autores Usan Substack y Patreon.<br>
-      <small>En 574 posteos</small>
-    </a>
-  </div>
-  <div class="categoria">
-    <a href="fiction-resumen40.html" target="_blank">
-      40. Artistas de Ficción: Un Universo de Fantasía y Sci-Fi.<br>
-      <small>En 567 posteos</small>
-    </a>
-  </div>
-  <div class="categoria">
-    <a href="fiction-resumen41.html" target="_blank">
-      41. The Handmaid's Tale: De la Ficción a la Realidad Política.<br>
-      <small>En 535 posteos</small>
-    </a>
-  </div>
-  <div class="categoria">
-    <a href="fiction-resumen42.html" target="_blank">
-      42. Elon Musk y su Distorsionada Visión de la Ciencia Ficción.<br>
-      <small>En 510 posteos</small>
-    </a>
-  </div>
-  <div class="categoria">
-    <a href="fiction-resumen43.html" target="_blank">
-      43. El Arte y Desafío de Nombrar Personajes en Ficción.<br>
-      <small>En 502 posteos</small>
-    </a>
-  </div>
-  <div class="categoria">
-    <a href="fiction-resumen44.html" target="_blank">
-      44. Susurros en la Niebla: Ecos de Ficción Oscura.<br>
-      <small>En 487 posteos</small>
-    </a>
-  </div>
-  <div class="categoria">
-    <a href="fiction-resumen45.html" target="_blank">
-      45. J.K. Rowling: Ficción, Fandom y Controversia Transfóbica.<br>
-      <small>En 464 posteos</small>
-    </a>
-  </div>
-  <div class="categoria">
-    <a href="fiction-resumen46.html" target="_blank">
-      46. Un Viaje por la Ficción de Espionaje y Clásicos Literarios.<br>
-      <small>En 445 posteos</small>
-    </a>
-  </div>
-  <div class="categoria">
-    <a href="fiction-resumen47.html" target="_blank">
-      47. Stranger than Fiction: La joya subestimada de Will Ferrell.<br>
-      <small>En 333 posteos</small>
-    </a>
-  </div>
-  <div class="categoria">
-    <a href="fiction-resumen48.html" target="_blank">
-      48. La Ficción Domina el Discurso Político del Reino Unido.<br>
-      <small>En 293 posteos</small>
-    </a>
-  </div>
-  <div class="footer">&nbsp;</div> 
-</body>
-</html>
+/* ============================================================
+   ESTÉTICA RETRO UNIFICADA — "ANÁLISIS EN BLUESKY"
+   Aplicable a index.html, fiction-categorias.html y resúmenes.
+   ============================================================ */
+
+:root {
+  --color-bg: #000000;
+  --color-accent: #ff0000;
+  --color-text: #e5e5e5;
+  --color-muted: #888888;
+  --color-border: #333333;
+}
+
+/* ------------------------------------------------------------
+   CONFIGURACIÓN GLOBAL
+   ------------------------------------------------------------ */
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: "Source Code Pro", "Consolas", monospace;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* ------------------------------------------------------------
+   ENCABEZADOS Y TIPOGRAFÍA
+   ------------------------------------------------------------ */
+h1, h2, h3 {
+  color: var(--color-accent);
+  text-shadow: 0 0 5px rgba(255, 0, 0, 0.3);
+  letter-spacing: 0.5px;
+}
+
+h1 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 18px;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+p, li {
+  font-size: 15px;
+  color: var(--color-text);
+}
+
+/* ------------------------------------------------------------
+   TEXTO DE INFORMACIÓN DE CATEGORÍAS EN INDEX - COLOR GRIS CLARO Y TIPOGRAFÍA
+   ------------------------------------------------------------ */
+.info-categoria {
+  color: #e5e5e5 !important;
+  font-family: "Source Code Pro", "Consolas", monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  letter-spacing: 0.3px;
+  font-style: normal !important; /* SE ELIMINA LA CURSIVA */
+}
+
+/* ------------------------------------------------------------
+   TÍTULOS DE SECCIONES EN RESUMENES - COLOR GRIS CLARO
+   ------------------------------------------------------------ */
+.seccion h2 {
+  color: #e5e5e5; /* Gris muy claro */
+  text-shadow: 0 0 5px rgba(229, 229, 229, 0.3);
+}
+
+/* ------------------------------------------------------------
+   DESCRIPCIÓN DE SECCIONES EN RESUMENES - TEXTO MÁS PEQUEÑO
+   ------------------------------------------------------------ */
+.seccion .descripcion {
+  font-size: 14px;
+}
+
+/* ------------------------------------------------------------
+   ESTRUCTURA Y CONTENEDORES
+   ------------------------------------------------------------ */
+.header {
+  text-align: center;
+  padding: 25px 0;
+  margin-bottom: 30px;
+  border-top: 1px solid var(--color-accent);
+  border-bottom: 1px solid var(--color-accent);
+  position: relative;
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-accent), transparent);
+}
+
+.subtitulo {
+  font-size: 15px;
+  color: var(--color-muted);
+  margin-top: 5px;
+}
+
+/* ------------------------------------------------------------
+   SEPARADOR LÍNEA ROJA - SOLO INDEX (MODIFICADO)
+   ------------------------------------------------------------ */
+.descripcion-index {
+  position: relative;
+  padding-bottom: 25px; /* REDUCIDO: misma distancia que el header */
+  margin-bottom: 30px; /* AJUSTADO: para mantener espaciado general */
+  text-align: center;
+}
+
+.descripcion-index::after {
+  content: "";
+  position: absolute;
+  bottom: 0; /* POSICIÓN CAMBIADA: ahora está justo al final del padding */
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-accent), transparent);
+}
+
+/* ------------------------------------------------------------
+   DESCRIPCIONES DE SECCIONES EN RESUMENES - ALINEACIÓN IZQUIERDA
+   ------------------------------------------------------------ */
+.seccion .descripcion {
+  text-align: left;
+  padding-bottom: 0;
+  margin-bottom: 15px;
+}
+
+.seccion .descripcion::after {
+  content: none; /* Elimina los tres puntos en resúmenes */
+}
+
+/* ------------------------------------------------------------
+   CATEGORÍAS - MARCO ÚNICO
+   ------------------------------------------------------------ */
+.categoria {
+  /* MODIFICACIÓN CLAVE: Fondo negro */
+  background-color: #000000; 
+  border: 1px solid var(--color-border);
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: none; 
+  transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.categoria a {
+  color: var(--color-text);
+  text-decoration: none;
+  display: block;
+  border: none;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* TÍTULO DE CATEGORÍA CON ESTILO DE h2 */
+.categoria-titulo {
+  color: var(--color-accent);
+  text-shadow: 0 0 5px rgba(255, 0, 0, 0.3);
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  letter-spacing: 0.5px;
+}
+
+.categoria small {
+  color: var(--color-muted);
+  font-size: 14px;
+  font-style: italic;
+}
+
+/* ------------------------------------------------------------
+   SOLUCIÓN FINAL: Estados de Categoría (Hover, Active, Visited, Focus)
+   ------------------------------------------------------------ */
+
+/* Efecto hover y focus */
+.categoria:hover,
+.categoria:focus-within {
+  /* MODIFICACIÓN: Fondo negro en hover/focus */
+  background-color: #000000;
+  border-color: var(--color-border);
+  box-shadow: 0 0 10px rgba(17, 17, 17, 0.8);
+  outline: none; 
+}
+
+/* ESTADO ACTIVO (Al pulsar/tocar) */
+.categoria:active {
+  /* MODIFICACIÓN: Fondo negro en active */
+  background-color: #000000 !important; 
+  border-color: var(--color-accent); 
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.5); 
+  transition-duration: 0.05s;
+}
+
+/* La solución más agresiva para el fondo grisáceo en el ancla */
+.categoria a:active,
+.categoria a:focus,
+.categoria a:focus-visible {
+  background-color: transparent !important; 
+  color: var(--color-text) !important;
+  outline: none !important;
+}
+
+/* ESTADO VISITADO (Asegura que los colores se mantengan) */
+.categoria a:visited {
+  color: var(--color-text);
+}
+
+.categoria a:visited small {
+  color: var(--color-muted);
+}
+
+/* ------------------------------------------------------------
+   SECCIONES
+   ------------------------------------------------------------ */
+.seccion {
+  /* MODIFICACIÓN: Fondo negro */
+  background-color: #000000;
+  border: 1px solid var(--color-border);
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(17, 17, 17, 0.8);
+}
+
+/* ------------------------------------------------------------
+   CITAS Y LISTAS
+   ------------------------------------------------------------ */
+.lista-citas {
+  list-style: none;
+  padding-left: 0;
+}
+
+.cita-item {
+  border-left: 2px solid var(--color-border);
+  padding-left: 12px;
+  margin-bottom: 12px;
+}
+
+.cita-original {
+  font-style: italic;
+  color: var(--color-muted);
+  display: block;
+  margin-bottom: 5px;
+  font-size: 15px;
+}
+
+/* (Se elimina la clase .cita-traduccion por no usarse) */
+
+/* ------------------------------------------------------------
+   ENLACES Y BOTONES (EXCEPTO DENTRO DE CATEGORÍAS)
+   ------------------------------------------------------------ */
+a:not(.categoria a) {
+  color: var(--color-text);
+  text-decoration: none;
+  border: 1px solid var(--color-border);
+  padding: 6px 12px;
+  display: inline-block;
+  /* MODIFICACIÓN: Fondo negro */
+  background-color: #000000;
+  transition: all 0.2s ease;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+a:not(.categoria a):visited {
+  color: var(--color-text); /* Mantiene el color original después de visitar */
+  border-color: var(--color-border); /* Mantiene el borde original */
+}
+
+/* Efecto hover para enlaces */
+a:not(.categoria a):hover {
+  /* MODIFICACIÓN: Fondo negro en hover */
+  background-color: #000000;
+  border-color: var(--color-accent);
+}
+
+/* ------------------------------------------------------------
+   SOLUCIONES PARA DESTELLO BLANCO
+   ------------------------------------------------------------ */
+
+/* Eliminar destello blanco en todos los enlaces */
+a, .categoria a {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* Eliminar outline en focus para una experiencia más limpia */
+a:focus {
+  outline: none;
+}
+
+/* Mantener accesibilidad con outline sutil en focus-visible */
+a:focus-visible {
+  outline: 1px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* ------------------------------------------------------------
+   PIE DE PÁGINA
+   ------------------------------------------------------------ */
+.footer {
+  text-align: center;
+  border-top: 1px solid var(--color-accent);
+  color: var(--color-muted);
+  font-size: 13px;
+  padding-top: 15px;
+  margin-top: 25px;
+}
+
+/* ------------------------------------------------------------
+   RESPONSIVE (para móviles)
+   ------------------------------------------------------------ */
+@media (max-width: 600px) {
+  body {
+    font-size: 15px;
+    padding: 15px;
+    line-height: 1.6;
+  }
+  h1 { font-size: 20px; }
+  h2 { font-size: 17px; }
+  .seccion, .categoria { padding: 15px; }
+  .cita-original { font-size: 13px; }
+  .categoria a { font-size: 14px; }
+  .categoria small { font-size: 13px; }
+  .categoria-titulo { font-size: 17px; }
+  
+  /* Descripción de secciones en resúmenes - tamaño móvil */
+  .seccion .descripcion {
+    font-size: 13px;
+  }
+  
+  /* Línea roja responsive - SOLO INDEX */
+  .descripcion-index {
+    padding-bottom: 15px; /* REDUCIDO para móviles */
+    margin-bottom: 20px; /* AJUSTADO para móviles */
+  }
+  
+  /* Ajustes para enlaces en móviles */
+  a:not(.categoria a) {
+    padding: 8px 14px;
+    font-size: 14px;
+  }
+  
+  /* Info categoría en móviles */
+  .info-categoria {
+    font-size: 13px;
+  }
+}
 
