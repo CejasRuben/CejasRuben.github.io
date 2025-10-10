@@ -112,19 +112,19 @@ p, li {
 }
 
 /* ------------------------------------------------------------
-   SEPARADOR LÍNEA ROJA - SOLO INDEX (MODIFICADO)
+   SEPARADOR LÍNEA ROJA - SOLO DEBAJO DE DESCRIPCIÓN
    ------------------------------------------------------------ */
 .descripcion-index {
   position: relative;
-  padding-bottom: 25px; /* REDUCIDO: misma distancia que el header */
-  margin-bottom: 30px; /* AJUSTADO: para mantener espaciado general */
+  padding-bottom: 25px;
+  margin-bottom: 30px;
   text-align: center;
 }
 
 .descripcion-index::after {
   content: "";
   position: absolute;
-  bottom: 0; /* POSICIÓN CAMBIADA: ahora está justo al final del padding */
+  bottom: 0;
   left: 0;
   right: 0;
   height: 1px;
@@ -132,7 +132,7 @@ p, li {
 }
 
 /* ------------------------------------------------------------
-   CATEGORÍAS - SIN LÍNEA SEPARADORA INDIVIDUAL
+   CATEGORÍAS - SIN LÍNEA SEPARADORA
    ------------------------------------------------------------ */
 .categoria {
   background-color: #000000; 
@@ -141,6 +141,11 @@ p, li {
   margin-bottom: 20px;
   box-shadow: none; 
   transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* ELIMINAR DEFINITIVAMENTE CUALQUIER LÍNEA EN CATEGORÍAS */
+.categoria::after {
+  content: none !important;
 }
 
 .categoria a {
@@ -172,7 +177,7 @@ p, li {
 }
 
 /* ------------------------------------------------------------
-   BOTÓN DE CONSULTA - ÚNICA LÍNEA SEPARADORA ANTES DEL FOOTER
+   BOTÓN DE CONSULTA - ÚNICA LÍNEA DOBLE ANTES DEL FOOTER
    ------------------------------------------------------------ */
 .boton-consulta {
   position: relative;
@@ -371,7 +376,7 @@ a:focus-visible {
     font-size: 13px;
   }
   
-  /* Línea roja responsive - SOLO INDEX */
+  /* Línea roja responsive - SOLO DEBAJO DE DESCRIPCIÓN */
   .descripcion-index {
     padding-bottom: 15px;
     margin-bottom: 20px;
