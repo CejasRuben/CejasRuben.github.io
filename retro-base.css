@@ -289,7 +289,7 @@ a:not(.categoria a):visited {
 a:not(.categoria a):hover {
   /* MODIFICACIÓN: Fondo negro en hover */
   background-color: #000000;
-  border-color: var(--color-accent);
+  border-color: var(--color-accent); /* Se convierte en rojo por defecto */
 }
 
 /* ------------------------------------------------------------
@@ -324,19 +324,18 @@ a:focus-visible {
   color: var(--color-muted);
   font-size: 13px;
   padding-top: 15px;
-  /* CAMBIO APLICADO AQUÍ */
-  margin-top: 22px;
+  margin-top: 22px; /* MANTENEMOS: Ajuste para acercar el botón a la línea */
 }
 
 /* ------------------------------------------------------------
    AJUSTE DE ENLACE DEL PIE DE PÁGINA (Consultas)
-   Asegura que el borde NO cambie a rojo en hover/focus, manteniendo el gris.
+   Asegura que el borde NO cambie a rojo en hover/focus/active, manteniendo el gris.
    ------------------------------------------------------------ */
 .footer a:hover,
-.footer a:focus {
+.footer a:focus,
+.footer a:active { /* AÑADIDO: Estado active para garantizar el gris al pulsar */
   /* Restablece el color del borde a gris (var(--color-border) es #333333) */
-  border-color: var(--color-border);
-  /* Mantiene la transición de fondo-color si se aplicara otra cosa, pero mantiene el fondo negro */
+  border-color: var(--color-border) !important; /* USAMOS !important para máxima prioridad */
   background-color: #000000;
 }
 
