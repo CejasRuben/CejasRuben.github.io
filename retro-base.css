@@ -65,6 +65,7 @@ p, li {
   font-size: 14px;
   line-height: 1.5;
   letter-spacing: 0.3px;
+  font-style: normal !important; /* SE ELIMINA LA CURSIVA */
 }
 
 /* ------------------------------------------------------------
