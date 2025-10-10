@@ -57,6 +57,18 @@ p, li {
 }
 
 /* ------------------------------------------------------------
+   TEXTO DE INFORMACIÓN DE CATEGORÍAS EN INDEX - COLOR GRIS CLARO Y TIPOGRAFÍA
+   ------------------------------------------------------------ */
+.info-categoria {
+  color: #e5e5e5 !important;
+  font-family: "Source Code Pro", "Consolas", monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  letter-spacing: 0.3px;
+  font-style: normal !important; /* SE ELIMINA LA CURSIVA */
+}
+
+/* ------------------------------------------------------------
    TÍTULOS DE SECCIONES EN RESUMENES - COLOR GRIS CLARO
    ------------------------------------------------------------ */
 .seccion h2, .investigacion h2 {
@@ -350,5 +362,10 @@ a:focus-visible, .boton:focus-visible {
   a:not(.categoria a), .boton {
     padding: 8px 14px;
     font-size: 14px;
+  }
+  
+  /* Info categoría en móviles */
+  .info-categoria {
+    font-size: 13px;
   }
 }
