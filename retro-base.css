@@ -268,8 +268,8 @@ p, li {
 a:not(.categoria a) {
   color: var(--color-text);
   text-decoration: none;
-  /* CAMBIO CLAVE: Eliminar borde del botón Consultas */
-  border: none; 
+  /* RESTAURADO: Se aplican las propiedades del botón estándar (marco gris) */
+  border: 1px solid var(--color-border); 
   padding: 6px 12px;
   display: inline-block;
   /* MODIFICACIÓN: Fondo negro */
@@ -283,16 +283,15 @@ a:not(.categoria a) {
 
 a:not(.categoria a):visited {
   color: var(--color-text); /* Mantiene el color original después de visitar */
-  /* CAMBIO: Eliminar el border-color obsoleto */
-  border-color: transparent;
+  border-color: var(--color-border); /* Mantiene el borde original */
 }
 
 /* Efecto hover para enlaces */
 a:not(.categoria a):hover {
   /* MODIFICACIÓN: Fondo negro en hover */
   background-color: #000000;
-  /* CAMBIO: Eliminar la aplicación del borde rojo en hover */
-  border-color: transparent;
+  /* RESTAURADO: Borde rojo por defecto en hover (se sobrescribe para .footer a) */
+  border-color: var(--color-accent);
 }
 
 /* ------------------------------------------------------------
@@ -327,18 +326,19 @@ a:focus-visible {
   color: var(--color-muted);
   font-size: 13px;
   padding-top: 15px;
-  margin-top: 22px; /* Ajuste para acercar el botón a la línea */
+  /* MANTENIDO: Ajuste para acercar el botón a la línea */
+  margin-top: 22px; 
 }
 
 /* ------------------------------------------------------------
    AJUSTE DE ENLACE DEL PIE DE PÁGINA (Consultas)
-   Asegura que el borde NO aparezca en hover/focus/active.
+   GARANTIZA EL BORDE GRIS EN TODOS LOS ESTADOS (HOVER, FOCUS, ACTIVE)
    ------------------------------------------------------------ */
 .footer a:hover,
 .footer a:focus,
 .footer a:active {
-  /* CAMBIO CLAVE: Asegurar que el borde sea ninguno */
-  border: none !important;
+  /* SOBREESCRIBE: Fuerza el color gris del borde, anulando el rojo del hover general */
+  border-color: var(--color-border);
   background-color: #000000;
 }
 
