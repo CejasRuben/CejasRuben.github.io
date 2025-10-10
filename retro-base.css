@@ -153,7 +153,9 @@ p, li {
   font-style: italic;
 }
 
-/* Estados */
+/* ------------------------------------------------------------
+   ESTADOS DE INTERACCIÓN
+   ------------------------------------------------------------ */
 .categoria:hover,
 .categoria:focus-within {
   background-color: #000000;
