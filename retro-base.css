@@ -177,21 +177,20 @@ p, li {
 }
 
 /* ------------------------------------------------------------
-   BOTÓN DE CONSULTA - ÚNICA LÍNEA DOBLE ANTES DEL FOOTER
+   BOTÓN DE CONSULTA - SOLO LÍNEA INFERIOR
    ------------------------------------------------------------ */
 .boton-consulta {
   position: relative;
   text-align: center;
   padding: 25px 0;
   margin-bottom: 30px;
-  border-top: 1px solid var(--color-accent);
-  border-bottom: 1px solid var(--color-accent);
+  border-bottom: 1px solid var(--color-accent); /* SOLO LÍNEA INFERIOR */
 }
 
-.boton-consulta::before {
+.boton-consulta::after {
   content: "";
   position: absolute;
-  top: -2px;
+  bottom: -2px; /* POSICIÓN DEBAJO DE LA LÍNEA PRINCIPAL */
   left: 0;
   right: 0;
   height: 1px;
