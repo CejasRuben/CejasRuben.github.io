@@ -65,14 +65,14 @@ p, li {
   font-size: 14px;
   line-height: 1.5;
   letter-spacing: 0.3px;
-  font-style: normal !important; /* SE ELIMINA LA CURSIVA */
+  font-style: normal !important;
 }
 
 /* ------------------------------------------------------------
    TÍTULOS DE SECCIONES EN RESUMENES - COLOR GRIS CLARO
    ------------------------------------------------------------ */
 .seccion h2, .investigacion h2 {
-  color: #e5e5e5; /* Gris muy claro */
+  color: #e5e5e5;
   text-shadow: 0 0 5px rgba(229, 229, 229, 0.3);
 }
 
@@ -105,26 +105,20 @@ p, li {
   background: linear-gradient(90deg, transparent, var(--color-accent), transparent);
 }
 
-.subtitulo {
-  font-size: 15px;
-  color: var(--color-muted);
-  margin-top: 5px;
-}
-
 /* ------------------------------------------------------------
-   SEPARADOR LÍNEA ROJA - SOLO INDEX (MODIFICADO)
+   SEPARADOR LÍNEA ROJA - SOLO INDEX
    ------------------------------------------------------------ */
 .descripcion-index {
   position: relative;
-  padding-bottom: 25px; /* REDUCIDO: misma distancia que el header */
-  margin-bottom: 30px; /* AJUSTADO: para mantener espaciado general */
+  padding-bottom: 25px;
+  margin-bottom: 30px;
   text-align: center;
 }
 
 .descripcion-index::after {
   content: "";
   position: absolute;
-  bottom: 0; /* POSICIÓN CAMBIADA: ahora está justo al final del padding */
+  bottom: 0;
   left: 0;
   right: 0;
   height: 1px;
@@ -132,23 +126,9 @@ p, li {
 }
 
 /* ------------------------------------------------------------
-   DESCRIPCIONES DE SECCIONES EN RESUMENES - ALINEACIÓN IZQUIERDA
-   ------------------------------------------------------------ */
-.seccion .descripcion, .investigacion .descripcion {
-  text-align: left;
-  padding-bottom: 0;
-  margin-bottom: 15px;
-}
-
-.seccion .descripcion::after, .investigacion .descripcion::after {
-  content: none; /* Elimina los tres puntos en resúmenes */
-}
-
-/* ------------------------------------------------------------
-   CATEGORÍAS - MARCO ÚNICO
+   CATEGORÍAS
    ------------------------------------------------------------ */
 .categoria {
-  /* MODIFICACIÓN CLAVE: Fondo negro */
   background-color: #000000; 
   border: 1px solid var(--color-border);
   padding: 20px;
@@ -164,19 +144,7 @@ p, li {
   border: none;
   padding: 0;
   -webkit-tap-highlight-color: transparent;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
   user-select: none;
-}
-
-/* TÍTULO DE CATEGORÍA CON ESTILO DE h2 */
-.categoria-titulo {
-  color: var(--color-accent);
-  text-shadow: 0 0 5px rgba(255, 0, 0, 0.3);
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 8px;
-  letter-spacing: 0.5px;
 }
 
 .categoria small {
@@ -185,30 +153,22 @@ p, li {
   font-style: italic;
 }
 
-/* ------------------------------------------------------------
-   SOLUCIÓN FINAL: Estados de Categoría (Hover, Active, Visited, Focus)
-   ------------------------------------------------------------ */
-
-/* Efecto hover y focus */
+/* Estados */
 .categoria:hover,
 .categoria:focus-within {
-  /* MODIFICACIÓN: Fondo negro en hover/focus */
   background-color: #000000;
   border-color: var(--color-border);
   box-shadow: 0 0 10px rgba(17, 17, 17, 0.8);
   outline: none; 
 }
 
-/* ESTADO ACTIVO (Al pulsar/tocar) */
 .categoria:active {
-  /* MODIFICACIÓN: Fondo negro en active */
   background-color: #000000 !important; 
   border-color: var(--color-accent); 
   box-shadow: 0 0 10px rgba(255, 0, 0, 0.5); 
   transition-duration: 0.05s;
 }
 
-/* La solución más agresiva para el fondo grisáceo en el ancla */
 .categoria a:active,
 .categoria a:focus,
 .categoria a:focus-visible {
@@ -217,7 +177,6 @@ p, li {
   outline: none !important;
 }
 
-/* ESTADO VISITADO (Asegura que los colores se mantengan) */
 .categoria a:visited {
   color: var(--color-text);
 }
@@ -230,7 +189,6 @@ p, li {
    SECCIONES E INVESTIGACIÓN
    ------------------------------------------------------------ */
 .seccion, .investigacion {
-  /* MODIFICACIÓN: Fondo negro */
   background-color: #000000;
   border: 1px solid var(--color-border);
   padding: 20px;
@@ -239,99 +197,26 @@ p, li {
 }
 
 /* ------------------------------------------------------------
-   CITAS Y LISTAS
-   ------------------------------------------------------------ */
-.lista-citas {
-  list-style: none;
-  padding-left: 0;
-}
-
-.cita-item {
-  border-left: 2px solid var(--color-border);
-  padding-left: 12px;
-  margin-bottom: 12px;
-}
-
-.cita-original {
-  font-style: italic;
-  color: var(--color-muted);
-  display: block;
-  margin-bottom: 5px;
-  font-size: 15px;
-}
-
-.cita-traduccion {
-  color: var(--color-text);
-  font-size: 15px;
-}
-
-/* ------------------------------------------------------------
-   ENLACES Y BOTONES (EXCEPTO DENTRO DE CATEGORÍAS)
+   ENLACES Y BOTONES
    ------------------------------------------------------------ */
 a:not(.categoria a), .boton {
   color: var(--color-text);
   text-decoration: none;
   border: 1px solid var(--color-border);
   padding: 6px 12px;
-  display: inline-block;
-  /* MODIFICACIÓN: Fondo negro */
   background-color: #000000;
   transition: all 0.2s ease;
   -webkit-tap-highlight-color: transparent;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
   user-select: none;
 }
 
-a:not(.categoria a):visited, .boton:visited {
-  color: var(--color-text); /* Mantiene el color original después de visitar */
-  border-color: var(--color-border); /* Mantiene el borde original */
-}
-
-/* Efecto hover para botones */
 a:not(.categoria a):hover, .boton:hover {
-  /* MODIFICACIÓN: Fondo negro en hover */
   background-color: #000000;
   border-color: var(--color-accent);
 }
 
 /* ------------------------------------------------------------
-   SOLUCIONES PARA DESTELLO BLANCO
-   ------------------------------------------------------------ */
-
-/* Eliminar destello blanco en todos los enlaces */
-a, .categoria a, .boton {
-  -webkit-tap-highlight-color: transparent;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  user-select: none;
-}
-
-/* Eliminar outline en focus para una experiencia más limpia */
-a:focus, .boton:focus {
-  outline: none;
-}
-
-/* Mantener accesibilidad con outline sutil en focus-visible */
-a:focus-visible, .boton:focus-visible {
-  outline: 1px solid var(--color-accent);
-  outline-offset: 2px;
-}
-
-/* ------------------------------------------------------------
-   PIE DE PÁGINA
-   ------------------------------------------------------------ */
-.footer {
-  text-align: center;
-  border-top: 1px solid var(--color-accent);
-  color: var(--color-muted);
-  font-size: 13px;
-  padding-top: 15px;
-  margin-top: 25px;
-}
-
-/* ------------------------------------------------------------
-   RESPONSIVE (para móviles)
+   RESPONSIVE
    ------------------------------------------------------------ */
 @media (max-width: 600px) {
   body {
@@ -342,30 +227,11 @@ a:focus-visible, .boton:focus-visible {
   h1 { font-size: 20px; }
   h2 { font-size: 17px; }
   .seccion, .categoria, .investigacion { padding: 15px; }
-  .cita-original { font-size: 13px; }
   .categoria a { font-size: 14px; }
   .categoria small { font-size: 13px; }
   .categoria-titulo { font-size: 17px; }
-  
-  /* Descripción de secciones en resúmenes - tamaño móvil */
-  .seccion .descripcion, .investigacion .descripcion {
-    font-size: 13px;
-  }
-  
-  /* Línea roja responsive - SOLO INDEX */
   .descripcion-index {
-    padding-bottom: 15px; /* REDUCIDO para móviles */
-    margin-bottom: 20px; /* AJUSTADO para móviles */
-  }
-  
-  /* Ajustes para botones en móviles */
-  a:not(.categoria a), .boton {
-    padding: 8px 14px;
-    font-size: 14px;
-  }
-  
-  /* Info categoría en móviles */
-  .info-categoria {
-    font-size: 13px;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
   }
 }
