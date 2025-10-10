@@ -1,3 +1,5 @@
+[file name]: retro-base.css
+[file content begin]
 /* ============================================================
    ESTÉTICA RETRO UNIFICADA — "ANÁLISIS EN BLUESKY"
    Aplicable a index.html, fiction-categorias.html y resúmenes.
@@ -319,25 +321,58 @@ a:focus-visible, .boton:focus-visible {
 }
 
 /* ------------------------------------------------------------
-   RESPONSIVE (para móviles)
+   RESPONSIVE (para móviles) - MODIFICADO: TODOS LOS TEXTOS #e5e5e5 A 14px
    ------------------------------------------------------------ */
 @media (max-width: 600px) {
   body {
-    font-size: 15px;
+    font-size: 14px; /* MODIFICADO: de 15px a 14px */
     padding: 15px;
     line-height: 1.6;
   }
+  
   h1 { font-size: 20px; }
   h2 { font-size: 17px; }
-  .seccion, .categoria, .investigacion { padding: 15px; }
-  .cita-original { font-size: 13px; }
-  .categoria a { font-size: 14px; }
-  .categoria small { font-size: 13px; }
-  .categoria-titulo { font-size: 17px; }
   
-  /* Descripción de secciones en resúmenes - tamaño móvil */
+  /* MODIFICADO: Todos los textos con color #e5e5e5 a 14px */
+  p, li {
+    font-size: 14px; /* Texto general */
+  }
+  
+  .seccion, .categoria, .investigacion { padding: 15px; }
+  
+  .cita-original { 
+    font-size: 14px; /* MODIFICADO: de 13px a 14px */
+  }
+  
+  .cita-traduccion {
+    font-size: 14px; /* MODIFICADO: de 15px a 14px */
+  }
+  
+  .categoria a { 
+    font-size: 14px; /* MODIFICADO: ya estaba en 14px, se mantiene */
+  }
+  
+  .categoria small { 
+    font-size: 14px; /* MODIFICADO: de 13px a 14px */
+  }
+  
+  .categoria-titulo { 
+    font-size: 17px; /* Se mantiene (no es #e5e5e5) */
+  }
+  
+  /* Títulos de secciones en resúmenes - MODIFICADO */
+  .seccion h2, .investigacion h2 {
+    font-size: 17px; /* Se mantiene (aunque son #e5e5e5, son títulos) */
+  }
+  
+  /* Descripción de secciones en resúmenes - MODIFICADO */
   .seccion .descripcion, .investigacion .descripcion {
-    font-size: 13px;
+    font-size: 14px; /* MODIFICADO: de 13px a 14px */
+  }
+  
+  /* Subtítulo - MODIFICADO */
+  .subtitulo {
+    font-size: 14px; /* MODIFICADO: de 15px a 14px */
   }
   
   /* Línea roja responsive - SOLO INDEX */
@@ -346,9 +381,15 @@ a:focus-visible, .boton:focus-visible {
     margin-bottom: 20px; /* AJUSTADO para móviles */
   }
   
-  /* Ajustes para botones en móviles */
+  /* Ajustes para botones en móviles - MODIFICADO */
   a:not(.categoria a), .boton {
     padding: 8px 14px;
-    font-size: 14px;
+    font-size: 14px; /* MODIFICADO: de 14px a 14px (se mantiene) */
+  }
+  
+  /* Footer - MODIFICADO */
+  .footer {
+    font-size: 14px; /* MODIFICADO: de 13px a 14px */
   }
 }
+[file content end]
