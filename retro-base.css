@@ -169,9 +169,9 @@ p, li {
 }
 
 .categoria small {
-  color: var(--color-muted);
+  color: var(--color-text); /* CAMBIADO: de #888888 a #e5e5e5 */
   font-size: 14px;
-  font-style: italic;
+  font-style: normal; /* CAMBIADO: quitamos la cursiva */
   font-family: inherit;
 }
 
@@ -213,7 +213,7 @@ p, li {
 }
 
 .categoria a:visited small {
-  color: var(--color-muted);
+  color: var(--color-text); /* CAMBIADO: mantiene gris claro al visitar */
 }
 
 /* ------------------------------------------------------------
