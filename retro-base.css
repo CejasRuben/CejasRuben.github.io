@@ -263,13 +263,12 @@ p, li {
 /* (Se elimina la clase .cita-traduccion por no usarse) */
 
 /* ------------------------------------------------------------
-   ENLACES Y BOTONES (EXCEPTO DENTRO DE CATEGORÍAS)
+   ENLACES Y BOTONES (EXCEPTO DENTRO DE CATEGORÍAS) - MODIFICADO PARA CONSULTAS
    ------------------------------------------------------------ */
 a:not(.categoria a) {
   color: var(--color-text);
   text-decoration: none;
-  /* RESTAURADO: Se aplican las propiedades del botón estándar (marco gris) */
-  border: 1px solid var(--color-border); 
+  border: 1px solid var(--color-border);
   padding: 6px 12px;
   display: inline-block;
   /* MODIFICACIÓN: Fondo negro */
@@ -286,12 +285,32 @@ a:not(.categoria a):visited {
   border-color: var(--color-border); /* Mantiene el borde original */
 }
 
-/* Efecto hover para enlaces */
-a:not(.categoria a):hover {
-  /* MODIFICACIÓN: Fondo negro en hover */
+/* Efecto hover para enlaces - MISMAS PROPIEDADES QUE CATEGORÍA */
+a:not(.categoria a):hover,
+a:not(.categoria a):focus {
+  /* MODIFICACIÓN: Fondo negro en hover/focus */
   background-color: #000000;
-  /* RESTAURADO: Borde rojo por defecto en hover (se sobrescribe para .footer a) */
-  border-color: var(--color-accent);
+  border-color: var(--color-border);
+  box-shadow: 0 0 10px rgba(17, 17, 17, 0.8);
+  outline: none;
+}
+
+/* ESTADO ACTIVO (Al pulsar/tocar) - MISMAS PROPIEDADES QUE CATEGORÍA */
+a:not(.categoria a):active {
+  /* MODIFICACIÓN: Fondo negro en active */
+  background-color: #000000 !important; 
+  border-color: var(--color-accent); 
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.5); 
+  transition-duration: 0.05s;
+}
+
+/* La solución más agresiva para el fondo grisáceo en el ancla */
+a:not(.categoria a):active,
+a:not(.categoria a):focus,
+a:not(.categoria a):focus-visible {
+  background-color: transparent !important; 
+  color: var(--color-text) !important;
+  outline: none !important;
 }
 
 /* ------------------------------------------------------------
@@ -326,20 +345,7 @@ a:focus-visible {
   color: var(--color-muted);
   font-size: 13px;
   padding-top: 15px;
-  /* MANTENIDO: Ajuste para acercar el botón a la línea */
-  margin-top: 22px; 
-}
-
-/* ------------------------------------------------------------
-   AJUSTE DE ENLACE DEL PIE DE PÁGINA (Consultas)
-   GARANTIZA EL BORDE GRIS EN TODOS LOS ESTADOS (HOVER, FOCUS, ACTIVE)
-   ------------------------------------------------------------ */
-.footer a:hover,
-.footer a:focus,
-.footer a:active {
-  /* SOBREESCRIBE: Fuerza el color gris del borde, anulando el rojo del hover general */
-  border-color: var(--color-border);
-  background-color: #000000;
+  margin-top: 25px;
 }
 
 /* ------------------------------------------------------------
@@ -381,4 +387,3 @@ a:focus-visible {
     font-size: 13px;
   }
 }
-
