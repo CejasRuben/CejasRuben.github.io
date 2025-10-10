@@ -97,6 +97,7 @@ p, li {
   font-size: 15px;
   color: var(--color-muted);
   margin-top: 5px;
+  font-family: inherit;
 }
 
 /* ------------------------------------------------------------
@@ -171,6 +172,7 @@ p, li {
   color: var(--color-muted);
   font-size: 14px;
   font-style: italic;
+  font-family: inherit;
 }
 
 /* ------------------------------------------------------------
@@ -246,6 +248,7 @@ p, li {
   display: block;
   margin-bottom: 5px;
   font-size: 15px;
+  font-family: inherit;
 }
 
 .cita-traduccion {
@@ -316,6 +319,7 @@ a:focus-visible, .boton:focus-visible {
   font-size: 13px;
   padding-top: 15px;
   margin-top: 25px;
+  font-family: inherit;
 }
 
 /* ------------------------------------------------------------
@@ -352,40 +356,3 @@ a:focus-visible, .boton:focus-visible {
     font-size: 14px;
   }
 }
-itulo { 
-    font-size: 17px; /* Se mantiene (no es #e5e5e5) */
-  }
-  
-  /* Títulos de secciones en resúmenes - MODIFICADO */
-  .seccion h2, .investigacion h2 {
-    font-size: 17px; /* Se mantiene (aunque son #e5e5e5, son títulos) */
-  }
-  
-  /* Descripción de secciones en resúmenes - MODIFICADO */
-  .seccion .descripcion, .investigacion .descripcion {
-    font-size: 14px; /* MODIFICADO: de 13px a 14px */
-  }
-  
-  /* Subtítulo - MODIFICADO */
-  .subtitulo {
-    font-size: 14px; /* MODIFICADO: de 15px a 14px */
-  }
-  
-  /* Línea roja responsive - SOLO INDEX */
-  .descripcion-index {
-    padding-bottom: 15px; /* REDUCIDO para móviles */
-    margin-bottom: 20px; /* AJUSTADO para móviles */
-  }
-  
-  /* Ajustes para botones en móviles - MODIFICADO */
-  a:not(.categoria a), .boton {
-    padding: 8px 14px;
-    font-size: 14px; /* MODIFICADO: de 14px a 14px (se mantiene) */
-  }
-  
-  /* Footer - MODIFICADO */
-  .footer {
-    font-size: 14px; /* MODIFICADO: de 13px a 14px */
-  }
-}
-[file content end]
