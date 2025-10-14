@@ -463,23 +463,6 @@ a:focus-visible {
     box-shadow: 0 0 12px rgba(255, 0, 0, 0.4);
   }
 
-  /* Breadcrumb opcional */
-  .breadcrumb {
-    text-align: left;
-    margin-bottom: 20px;
-    font-size: 14px;
-    color: var(--color-muted);
-  }
-
-  .breadcrumb a {
-    color: var(--color-accent);
-    text-decoration: none;
-  }
-
-  .breadcrumb a:hover {
-    text-decoration: underline;
-  }
-
   /* Animación glow de títulos */
   @keyframes pulseRed {
     0%, 100% { text-shadow: 0 0 6px rgba(255, 0, 0, 0.4); }
