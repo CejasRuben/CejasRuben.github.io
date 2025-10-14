@@ -388,14 +388,12 @@ a:focus-visible {
     letter-spacing: 0.7px;
   }
 
-  /* Cuadrícula de dos columnas en index */
   .categorias-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
   }
 
-  /* Mejor legibilidad en resúmenes */
   .contenido-principal {
     max-width: 900px;
     margin: 0 auto;
@@ -410,14 +408,10 @@ a:focus-visible {
     transition: all 0.25s ease;
   }
 
+  /* Sin cambio a rojo en escritorio */
   .categoria:hover, .seccion:hover {
-    border-color: var(--color-accent);
-    box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
-  }
-
-  .categoria:hover h2,
-  .categoria:hover small {
-    color: #ffffff;
+    border-color: var(--color-border);
+    box-shadow: 0 0 20px rgba(17, 17, 17, 0.8);
   }
 
   .categoria-titulo {
@@ -456,14 +450,15 @@ a:focus-visible {
   a:not(.categoria a) {
     padding: 8px 16px;
     transition: all 0.25s ease;
+    border-color: var(--color-border);
   }
 
+  /* Eliminado el cambio a rojo */
   a:not(.categoria a):hover {
-    border-color: var(--color-accent);
-    box-shadow: 0 0 12px rgba(255, 0, 0, 0.4);
+    border-color: var(--color-border);
+    box-shadow: 0 0 10px rgba(17, 17, 17, 0.8);
   }
 
-  /* Animación glow de títulos */
   @keyframes pulseRed {
     0%, 100% { text-shadow: 0 0 6px rgba(255, 0, 0, 0.4); }
     50% { text-shadow: 0 0 10px rgba(255, 0, 0, 0.6); }
