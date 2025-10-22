@@ -32,6 +32,20 @@ body {
 }
 
 /* ------------------------------------------------------------
+   JUSTIFICACIÓN MEJORADA PARA DESCRIPCIÓN INDEX
+   ------------------------------------------------------------ */
+.descripcion-index p {
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  line-height: 1.6;
+  max-width: 85%;
+  margin: 0 auto;
+  font-size: 15px;
+  letter-spacing: 0.2px;
+}
+
+/* ------------------------------------------------------------
    ENCABEZADOS Y TIPOGRAFÍA
    ------------------------------------------------------------ */
 h1, h2, h3 {
@@ -362,6 +376,15 @@ a:focus-visible {
   .boton-consulta { padding: 15px 0; margin-bottom: 20px; }
   a:not(.categoria a) { padding: 8px 14px; font-size: 14px; }
   .info-categoria { font-size: 13px; }
+  
+  /* Justificación mejorada para móviles */
+  .descripcion-index p {
+    max-width: 95%;
+    text-align: left; /* En móvil mejor left que justify */
+    text-justify: auto;
+    hyphens: none;
+    line-height: 1.5;
+  }
 }
 
 /* ------------------------------------------------------------
@@ -473,4 +496,3 @@ a:focus-visible {
     animation: pulseRed 2s infinite;
   }
 }
-
