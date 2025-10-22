@@ -384,17 +384,18 @@ a:focus-visible {
   a:not(.categoria a) { padding: 8px 14px; font-size: 14px; }
   .info-categoria { font-size: 13px; }
   
-  /* En móvil: texto alineado a izquierda sin guiones */
+  /* En móvil: TAMBIÉN justificación completa con guiones */
   .descripcion-index p {
     max-width: 95%;
-    text-align: left;
-    text-justify: auto;
-    hyphens: none;
-    -webkit-hyphens: none;
-    -moz-hyphens: none;
-    -ms-hyphens: none;
-    line-height: 1.5;
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    line-height: 1.6;
     font-size: 15px;
+    text-indent: 0;
   }
 }
 
