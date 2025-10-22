@@ -32,22 +32,24 @@ body {
 }
 
 /* ------------------------------------------------------------
-   ESTILO CON JUSTIFICACIÓN Y GUIONES (SIN SANGRÍA)
+   JUSTIFICACIÓN COMPLETA CON GUIONES AUTOMÁTICOS
    ------------------------------------------------------------ */
 .descripcion-index p {
   text-align: justify;
   text-justify: inter-word;
-  /* Prefijos para compatibilidad total con guiones */
+  /* Guiones automáticos para cortes de palabras */
   hyphens: auto;
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
   -ms-hyphens: auto;
-  line-height: 1.7;
-  font-size: 16px;
-  letter-spacing: 0.3px;
-  max-width: 80%;
+  line-height: 1.6;
+  font-size: 15px;
+  letter-spacing: 0.2px;
+  max-width: 85%;
   margin: 0 auto;
-  padding: 0 10px;
+  padding: 0;
+  /* Sin sangría - alineado al margen izquierdo */
+  text-indent: 0;
 }
 
 /* ------------------------------------------------------------
@@ -382,7 +384,7 @@ a:focus-visible {
   a:not(.categoria a) { padding: 8px 14px; font-size: 14px; }
   .info-categoria { font-size: 13px; }
   
-  /* Estilo para móviles - sin justificación pero con guiones desactivados */
+  /* En móvil: texto alineado a izquierda sin guiones */
   .descripcion-index p {
     max-width: 95%;
     text-align: left;
@@ -391,9 +393,8 @@ a:focus-visible {
     -webkit-hyphens: none;
     -moz-hyphens: none;
     -ms-hyphens: none;
-    line-height: 1.6;
+    line-height: 1.5;
     font-size: 15px;
-    padding: 0 5px;
   }
 }
 
