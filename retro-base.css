@@ -32,19 +32,22 @@ body {
 }
 
 /* ------------------------------------------------------------
-   ESTILO LITERARIO CON SANGRÍA FRANCESA - DESCRIPCIÓN INDEX
+   ESTILO CON JUSTIFICACIÓN Y GUIONES (SIN SANGRÍA)
    ------------------------------------------------------------ */
 .descripcion-index p {
   text-align: justify;
   text-justify: inter-word;
+  /* Prefijos para compatibilidad total con guiones */
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
   line-height: 1.7;
-  text-indent: 1.5em;
   font-size: 16px;
   letter-spacing: 0.3px;
   max-width: 80%;
   margin: 0 auto;
   padding: 0 10px;
-  hyphens: auto;
 }
 
 /* ------------------------------------------------------------
@@ -379,14 +382,16 @@ a:focus-visible {
   a:not(.categoria a) { padding: 8px 14px; font-size: 14px; }
   .info-categoria { font-size: 13px; }
   
-  /* Estilo literario para móviles */
+  /* Estilo para móviles - sin justificación pero con guiones desactivados */
   .descripcion-index p {
     max-width: 95%;
-    text-align: left; /* En móvil mejor left que justify */
+    text-align: left;
     text-justify: auto;
     hyphens: none;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
     line-height: 1.6;
-    text-indent: 1.2em; /* Sangría más pequeña en móvil */
     font-size: 15px;
     padding: 0 5px;
   }
