@@ -14,6 +14,11 @@
 /* ------------------------------------------------------------
    CONFIGURACIÓN GLOBAL
    ------------------------------------------------------------ */
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
 html, body {
   margin: 0;
   padding: 0;
@@ -26,6 +31,7 @@ html, body {
 }
 
 body {
+  font-size: 15px;
   max-width: 900px;
   margin: 0 auto;
   padding: 20px;
