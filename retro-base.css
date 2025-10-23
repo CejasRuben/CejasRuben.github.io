@@ -16,8 +16,8 @@
 html {
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
-  scroll-behavior: smooth; /* navegación fluida */
-  color-scheme: dark; /* modo oscuro */
+  scroll-behavior: smooth;
+  color-scheme: dark;
 }
 
 html, body {
@@ -166,7 +166,7 @@ p, li {
   border: 1px solid var(--color-border);
   padding: 20px;
   margin-bottom: 20px;
-  transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  transition: color 0.2s ease;
 }
 
 .categoria a {
@@ -226,21 +226,29 @@ p, li {
 }
 
 /* ------------------------------------------------------------
-   ESTADOS DE CATEGORÍA
+   SIN MARCO EN CATEGORÍAS (hover / focus)
    ------------------------------------------------------------ */
 .categoria:hover,
-.categoria:focus-within {
+.categoria:focus-within,
+.categoria:active {
   background-color: #000;
   border-color: var(--color-border);
-  box-shadow: 0 0 10px rgba(255, 0, 0, 0.4); /* más notorio */
-  outline: none; 
+  box-shadow: none;
+  outline: none;
 }
 
-.categoria:active {
-  background-color: #000 !important; 
-  border-color: var(--color-accent);
-  box-shadow: 0 0 10px rgba(255, 0, 0, 0.4);
-  transition-duration: 0.05s;
+/* ------------------------------------------------------------
+   EFECTO SUAVE EN TEXTO AL PASAR
+   ------------------------------------------------------------ */
+.categoria:hover a,
+.categoria:focus-within a {
+  color: #ffffff;
+  text-shadow: 0 0 4px rgba(255, 0, 0, 0.4);
+}
+
+.categoria:hover small,
+.categoria:focus-within small {
+  color: var(--color-accent);
 }
 
 /* ------------------------------------------------------------
@@ -251,7 +259,6 @@ p, li {
   border: 1px solid var(--color-border);
   padding: 20px;
   margin-bottom: 20px;
-  box-shadow: 0 0 10px rgba(17, 17, 17, 0.8);
 }
 
 .lista-citas {
@@ -305,21 +312,6 @@ a:focus-visible {
   outline-offset: 3px;
 }
 
-/* ============================================================
-   🔴 EFECTO DE RESALTE COMPLETO EN CATEGORÍAS
-   ============================================================ */
-.categoria:hover a,
-.categoria:focus-within a {
-  color: #ffffff;
-  text-shadow: 0 0 4px rgba(255, 0, 0, 0.5);
-  transition: color 0.2s ease, text-shadow 0.2s ease;
-}
-
-.categoria:hover small,
-.categoria:focus-within small {
-  color: var(--color-accent);
-}
-
 /* ------------------------------------------------------------
    RESPONSIVE MÓVIL
    ------------------------------------------------------------ */
@@ -329,9 +321,7 @@ a:focus-visible {
     padding: 15px;
     line-height: 1.6;
   }
-  h1, h2 {
-    text-shadow: 0 0 3px rgba(255,0,0,0.3);
-  }
+  h1, h2 { text-shadow: 0 0 3px rgba(255,0,0,0.3); }
   h1 { font-size: 20px; }
   h2 { font-size: 17px; }
   .categoria, .seccion { padding: 15px; }
@@ -343,7 +333,6 @@ a:focus-visible {
   .descripcion-index p {
     max-width: 95%;
     text-align: justify;
-    text-justify: inter-word;
     hyphens: auto;
     word-break: break-word;
     line-height: 1.4;
@@ -382,17 +371,10 @@ a:focus-visible {
   .categoria, .seccion {
     padding: 30px 40px;
     margin-bottom: 25px;
-    transition: all 0.25s ease;
-  }
-
-  .categoria:hover, .seccion:hover {
-    border-color: var(--color-accent);
-    box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
   }
 
   .categoria-titulo {
     font-size: 22px;
-    text-shadow: 0 0 6px rgba(255, 0, 0, 0.4);
   }
 
   .info-categoria {
