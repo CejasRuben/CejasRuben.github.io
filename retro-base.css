@@ -1,6 +1,5 @@
 /* ============================================================
    ESTÉTICA RETRO UNIFICADA — "ANÁLISIS EN BLUESKY"
-   Aplicable a index.html, categorias.html y resúmenes.
    ============================================================ */
 
 :root {
@@ -17,8 +16,8 @@
 html {
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
-  scroll-behavior: smooth; /* ✅ Mejora de navegación */
-  color-scheme: dark; /* ✅ Soporte para modo oscuro del sistema */
+  scroll-behavior: smooth; /* navegación fluida */
+  color-scheme: dark; /* modo oscuro */
 }
 
 html, body {
@@ -56,7 +55,7 @@ body {
   margin: 0 auto;
   padding: 0;
   text-indent: 0;
-  word-break: break-word; /* ✅ Fallback para Samsung Internet */
+  word-break: break-word;
 }
 
 /* ------------------------------------------------------------
@@ -205,7 +204,7 @@ p, li {
 }
 
 /* ------------------------------------------------------------
-   PIE DE PÁGINA (CLASE ACTUALIZADA)
+   PIE DE PÁGINA
    ------------------------------------------------------------ */
 .main-footer {
   text-align: center;
@@ -233,14 +232,14 @@ p, li {
 .categoria:focus-within {
   background-color: #000;
   border-color: var(--color-border);
-  box-shadow: 0 0 10px rgba(17, 17, 17, 0.8);
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.4); /* más notorio */
   outline: none; 
 }
 
 .categoria:active {
   background-color: #000 !important; 
-  border-color: var(--color-border);
-  box-shadow: 0 0 10px rgba(17, 17, 17, 0.8);
+  border-color: var(--color-accent);
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.4);
   transition-duration: 0.05s;
 }
 
@@ -275,7 +274,7 @@ p, li {
 }
 
 /* ------------------------------------------------------------
-   ENLACES Y BOTONES EXTERNOS A CATEGORÍAS
+   ENLACES Y BOTONES EXTERNOS
    ------------------------------------------------------------ */
 a:not(.categoria a) {
   color: var(--color-text);
@@ -304,6 +303,21 @@ a:focus {
 a:focus-visible {
   outline: 2px solid var(--color-accent);
   outline-offset: 3px;
+}
+
+/* ============================================================
+   🔴 EFECTO DE RESALTE COMPLETO EN CATEGORÍAS
+   ============================================================ */
+.categoria:hover a,
+.categoria:focus-within a {
+  color: #ffffff;
+  text-shadow: 0 0 4px rgba(255, 0, 0, 0.5);
+  transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+
+.categoria:hover small,
+.categoria:focus-within small {
+  color: var(--color-accent);
 }
 
 /* ------------------------------------------------------------
@@ -365,17 +379,9 @@ a:focus-visible {
     gap: 30px;
   }
 
-  .contenido-principal {
-    max-width: 900px;
-    margin: 0 auto;
-    background: linear-gradient(90deg, rgba(255,0,0,0.05) 1px, transparent 1px);
-    background-size: 40ch 100%;
-  }
-
   .categoria, .seccion {
     padding: 30px 40px;
     margin-bottom: 25px;
-    box-shadow: 0 0 15px rgba(17, 17, 17, 0.8);
     transition: all 0.25s ease;
   }
 
@@ -392,19 +398,6 @@ a:focus-visible {
   .info-categoria {
     font-size: 16px;
     color: #dcdcdc !important;
-  }
-
-  .descripcion-index::after {
-    left: 15%;
-    right: 15%;
-    opacity: 0.8;
-  }
-
-  .main-footer {
-    font-size: 14px;
-    padding-top: 25px;
-    margin-top: 40px;
-    letter-spacing: 0.5px;
   }
 
   a:not(.categoria a):hover {
