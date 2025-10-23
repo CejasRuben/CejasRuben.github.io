@@ -281,24 +281,21 @@ p, li {
 }
 
 /* ------------------------------------------------------------
-   ENLACES Y BOTONES EXTERNOS
+   ENLACES Y BOTONES EXTERNOS (CORREGIDO - SIN MARCO)
    ------------------------------------------------------------ */
 a:not(.categoria a) {
   color: var(--color-text);
   text-decoration: none;
-  border: 1px solid var(--color-border);
-  padding: 6px 12px;
   display: inline-block;
-  background-color: #000;
-  transition: all 0.2s ease;
+  background-color: transparent;
+  transition: color 0.2s ease;
   -webkit-tap-highlight-color: transparent;
   user-select: none;
 }
 
 a:not(.categoria a):hover,
 a:not(.categoria a):focus {
-  border-color: var(--color-accent);
-  box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+  color: var(--color-accent);
   outline: none;
 }
 
@@ -380,10 +377,6 @@ a:focus-visible {
   .info-categoria {
     font-size: 16px;
     color: #dcdcdc !important;
-  }
-
-  a:not(.categoria a):hover {
-    box-shadow: 0 0 12px rgba(255, 0, 0, 0.4);
   }
 
   @keyframes pulseRed {
