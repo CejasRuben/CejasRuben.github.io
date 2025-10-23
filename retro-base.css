@@ -216,9 +216,9 @@ p, li {
 }
 
 /* ------------------------------------------------------------
-   PIE DE PÁGINA
+   PIE DE PÁGINA (CLASE ACTUALIZADA)
    ------------------------------------------------------------ */
-.footer {
+.main-footer {
   text-align: center;
   color: var(--color-muted);
   font-size: 13px;
@@ -227,7 +227,7 @@ p, li {
   position: relative;
 }
 
-.footer::before {
+.main-footer::before {
   content: "";
   position: absolute;
   top: 0;
@@ -481,14 +481,14 @@ a:focus-visible {
     opacity: 0.8;
   }
 
-  .footer {
+  .main-footer {
     font-size: 14px;
     padding-top: 25px;
     margin-top: 40px;
     letter-spacing: 0.5px;
   }
 
-  .footer::before {
+  .main-footer::before {
     left: 10%;
     right: 10%;
     opacity: 0.8;
