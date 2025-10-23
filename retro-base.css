@@ -1,6 +1,6 @@
 /* ============================================================
    ESTÉTICA RETRO UNIFICADA — "ANÁLISIS EN BLUESKY"
-   Aplicable a index.html, fiction-categorias.html y resúmenes.
+   Aplicable a index.html, categorias.html y resúmenes.
    ============================================================ */
 
 :root {
@@ -17,6 +17,8 @@
 html {
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
+  scroll-behavior: smooth; /* ✅ Mejora de navegación */
+  color-scheme: dark; /* ✅ Soporte para modo oscuro del sistema */
 }
 
 html, body {
@@ -54,8 +56,7 @@ body {
   margin: 0 auto;
   padding: 0;
   text-indent: 0;
-  /* 🔧 Mejora: fallback para Samsung Internet */
-  word-break: break-word;
+  word-break: break-word; /* ✅ Fallback para Samsung Internet */
 }
 
 /* ------------------------------------------------------------
@@ -162,16 +163,11 @@ p, li {
    CATEGORÍAS
    ------------------------------------------------------------ */
 .categoria {
-  background-color: #000000; 
+  background-color: #000;
   border: 1px solid var(--color-border);
   padding: 20px;
   margin-bottom: 20px;
-  box-shadow: none; 
   transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
-}
-
-.categoria::after {
-  content: none !important;
 }
 
 .categoria a {
@@ -181,8 +177,6 @@ p, li {
   border: none;
   padding: 0;
   -webkit-tap-highlight-color: transparent;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
   user-select: none;
 }
 
@@ -208,11 +202,6 @@ p, li {
   text-align: center;
   padding: 25px 0;
   margin-bottom: 30px;
-}
-
-.boton-consulta::before,
-.boton-consulta::after {
-  content: none !important;
 }
 
 /* ------------------------------------------------------------
@@ -242,49 +231,30 @@ p, li {
    ------------------------------------------------------------ */
 .categoria:hover,
 .categoria:focus-within {
-  background-color: #000000;
+  background-color: #000;
   border-color: var(--color-border);
   box-shadow: 0 0 10px rgba(17, 17, 17, 0.8);
   outline: none; 
 }
 
 .categoria:active {
-  background-color: #000000 !important; 
+  background-color: #000 !important; 
   border-color: var(--color-border);
   box-shadow: 0 0 10px rgba(17, 17, 17, 0.8);
   transition-duration: 0.05s;
 }
 
-.categoria a:active,
-.categoria a:focus,
-.categoria a:focus-visible {
-  background-color: transparent !important; 
-  color: var(--color-text) !important;
-  outline: none !important;
-}
-
-.categoria a:visited {
-  color: var(--color-text);
-}
-
-.categoria a:visited small {
-  color: var(--color-muted);
-}
-
 /* ------------------------------------------------------------
-   SECCIONES
+   SECCIONES Y CITAS
    ------------------------------------------------------------ */
 .seccion {
-  background-color: #000000;
+  background-color: #000;
   border: 1px solid var(--color-border);
   padding: 20px;
   margin-bottom: 20px;
   box-shadow: 0 0 10px rgba(17, 17, 17, 0.8);
 }
 
-/* ------------------------------------------------------------
-   CITAS
-   ------------------------------------------------------------ */
 .lista-citas {
   list-style: none;
   padding-left: 0;
@@ -305,7 +275,7 @@ p, li {
 }
 
 /* ------------------------------------------------------------
-   ENLACES Y BOTONES (EXTERNOS A CATEGORÍAS)
+   ENLACES Y BOTONES EXTERNOS A CATEGORÍAS
    ------------------------------------------------------------ */
 a:not(.categoria a) {
   color: var(--color-text);
@@ -313,28 +283,19 @@ a:not(.categoria a) {
   border: 1px solid var(--color-border);
   padding: 6px 12px;
   display: inline-block;
-  background-color: #000000;
+  background-color: #000;
   transition: all 0.2s ease;
   -webkit-tap-highlight-color: transparent;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
   user-select: none;
-}
-
-a:not(.categoria a):visited {
-  color: var(--color-text);
-  border-color: var(--color-border);
 }
 
 a:not(.categoria a):hover,
 a:not(.categoria a):focus {
-  background-color: #000000;
-  border-color: var(--color-border);
-  box-shadow: 0 0 10px rgba(17, 17, 17, 0.8);
+  border-color: var(--color-accent);
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
   outline: none;
 }
 
-/* 🔧 Mejora: visibilidad en navegadores con soporte limitado de :focus-visible */
 a:focus {
   outline: 1px solid var(--color-accent);
   outline-offset: 2px;
@@ -354,20 +315,17 @@ a:focus-visible {
     padding: 15px;
     line-height: 1.6;
   }
-  h1 { font-size: 20px; text-shadow: 0 0 3px rgba(255,0,0,0.3); } /* 🔧 Mejora Safari */
-  h2 { font-size: 17px; text-shadow: 0 0 3px rgba(255,0,0,0.3); } /* 🔧 Mejora Safari */
-  .seccion, .categoria { padding: 15px; }
-  .cita-original { font-size: 13px; }
-  .categoria a { font-size: 14px; }
-  .categoria small { font-size: 13px; }
+  h1, h2 {
+    text-shadow: 0 0 3px rgba(255,0,0,0.3);
+  }
+  h1 { font-size: 20px; }
+  h2 { font-size: 17px; }
+  .categoria, .seccion { padding: 15px; }
   .categoria-titulo { font-size: 17px; }
-  .seccion .descripcion { font-size: 13px; }
+  .categoria small, .cita-original, .info-categoria { font-size: 13px; }
   .descripcion-index { padding-bottom: 15px; margin-bottom: 20px; }
   .boton-consulta { padding: 15px 0; margin-bottom: 20px; }
-  a:not(.categoria a) { padding: 8px 14px; font-size: 14px; }
-  .info-categoria { font-size: 13px; }
-  
-  /* 🔧 Mejora: más ancho de texto en móviles angostos */
+
   .descripcion-index p {
     max-width: 95%;
     text-align: justify;
@@ -376,12 +334,11 @@ a:focus-visible {
     word-break: break-word;
     line-height: 1.4;
     font-size: 14px;
-    text-indent: 0;
   }
 }
 
 /* ------------------------------------------------------------
-   AJUSTES PARA MONITORES GRANDES (DESKTOP)
+   DESKTOP / MONITORES GRANDES
    ------------------------------------------------------------ */
 @media (min-width: 900px) {
   body {
@@ -395,13 +352,11 @@ a:focus-visible {
   h1 {
     font-size: 28px;
     text-shadow: 0 0 6px rgba(255, 0, 0, 0.4);
-    letter-spacing: 0.7px;
   }
 
   h2 {
     font-size: 22px;
     text-shadow: 0 0 6px rgba(255, 0, 0, 0.4);
-    letter-spacing: 0.7px;
   }
 
   .categorias-container {
@@ -429,11 +384,6 @@ a:focus-visible {
     box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
   }
 
-  .categoria:hover h2,
-  .categoria:hover small {
-    color: #ffffff;
-  }
-
   .categoria-titulo {
     font-size: 22px;
     text-shadow: 0 0 6px rgba(255, 0, 0, 0.4);
@@ -442,10 +392,6 @@ a:focus-visible {
   .info-categoria {
     font-size: 16px;
     color: #dcdcdc !important;
-  }
-
-  p, li {
-    font-size: 16px;
   }
 
   .descripcion-index::after {
@@ -461,19 +407,7 @@ a:focus-visible {
     letter-spacing: 0.5px;
   }
 
-  .main-footer::before {
-    left: 10%;
-    right: 10%;
-    opacity: 0.8;
-  }
-
-  a:not(.categoria a) {
-    padding: 8px 16px;
-    transition: all 0.25s ease;
-  }
-
   a:not(.categoria a):hover {
-    border-color: var(--color-accent);
     box-shadow: 0 0 12px rgba(255, 0, 0, 0.4);
   }
 
@@ -482,7 +416,5 @@ a:focus-visible {
     50% { text-shadow: 0 0 10px rgba(255, 0, 0, 0.6); }
   }
 
-  h1:hover {
-    animation: pulseRed 2s infinite;
-  }
+  h1:hover { animation: pulseRed 2s infinite; }
 }
