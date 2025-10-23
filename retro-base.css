@@ -399,7 +399,7 @@ a:focus-visible {
     -webkit-hyphens: auto;
     -moz-hyphens: auto;
     -ms-hyphens: auto;
-    line-height: 1.5;
+    line-height: 1.4; /* ← MODIFICADO: de 1.5 a 1.4 */
     font-size: 14px;
     text-indent: 0;
   }
